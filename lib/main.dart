@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:steamclient/src/views/home.dart';
 
 void main() => runApp(SteamClientApp());
 
@@ -8,8 +8,15 @@ class SteamClientApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "Steam Client",
-      theme: new ThemeData(primarySwatch: Colors.black),
-      home: null,
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.black,
+          primaryIconTheme: IconThemeData(color: Colors.black),
+          primaryTextTheme: TextTheme(
+              title: TextStyle(color: Colors.black, fontFamily: "Aveny")),
+          textTheme: TextTheme(title: TextStyle(color: Colors.black))),
+      home: new Home(),
     );
   }
 }
