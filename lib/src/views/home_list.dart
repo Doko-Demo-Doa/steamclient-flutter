@@ -106,7 +106,6 @@ class HomeList extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text("1 day ago"),

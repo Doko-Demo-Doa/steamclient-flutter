@@ -57,18 +57,15 @@ class HomeStories extends StatelessWidget {
   );
 
   @override
-    Widget build(BuildContext context) {
-      return new Container(
-        margin: const EdgeInsets.all(16.0),
-        child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            topText,
-            stores
-          ],
-        ),
-      );
-    }
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: const EdgeInsets.all(16.0),
+      child: new Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[topText, stores],
+      ),
+    );
+  }
 }
