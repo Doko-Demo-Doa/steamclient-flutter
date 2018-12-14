@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:steamclient/src/views/home_stories.dart';
+import 'package:steamclient/src/api/api_product.dart';
 
 class HomeList extends StatelessWidget {
   @override
@@ -44,7 +45,7 @@ class HomeList extends StatelessWidget {
                       ),
                       new IconButton(
                         icon: Icon(Icons.more_vert),
-                        onPressed: null,
+                        onPressed: () => ApiProduct.getLatestProduct(),
                       )
                     ],
                   ),
