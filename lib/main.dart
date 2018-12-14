@@ -10,7 +10,7 @@ class SteamClientApp extends StatelessWidget {
       title: "Steam Client",
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
           primaryColor: Colors.black,
           primaryIconTheme: IconThemeData(color: Colors.black),
           primaryTextTheme: TextTheme(
