@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
     final topBar = new AppBar(
       backgroundColor: Color(0xfff8faf8),
       centerTitle: true,
-      elevation: 1.0,
+      elevation: 1.2,
       leading: new Icon(Icons.camera_alt),
       title: SizedBox(
         height: 35.0,
