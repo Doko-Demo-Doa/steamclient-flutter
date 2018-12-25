@@ -8,7 +8,7 @@ class HomeList extends StatelessWidget {
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
     return ListView.builder(
-      itemCount: 100,
+      itemCount: 300,
       itemBuilder: (context, index) => index == 0
           ? new SizedBox(
               child: new HomeStories(),
@@ -53,7 +53,7 @@ class HomeList extends StatelessWidget {
                 Flexible(
                   fit: FlexFit.loose,
                   child: new Image.network(
-                      "https://images.pexels.com/photos/672657/pexels-photo-672657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                      "https://loremflickr.com/g/320/240/paris",
                       fit: BoxFit.cover),
                 ),
                 Padding(
