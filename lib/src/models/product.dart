@@ -1,9 +1,3 @@
-import 'package:dart_json_mapper/json_mapper.dart';
-
-enum Type {
-  game
-}
-
 class Product {
   String appName;
   String type;
