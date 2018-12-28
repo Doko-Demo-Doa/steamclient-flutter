@@ -15,10 +15,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  font_awesome_flutter:
-  dart_json_mapper:
-  dio:
-  carousel:
+  font_awesome_flutter: any
+  dart_json_mapper: any
+  dio: any
+  color: any
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
