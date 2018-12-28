@@ -27,6 +27,7 @@ class Carousel extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       return Container(
+        width: MediaQuery.of(context).size.width,
         child: PageView(
           children: _pages,
         ),

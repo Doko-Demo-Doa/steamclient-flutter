@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:steamclient/src/views/widgets/storefront/search_bar.dart';
 import 'package:steamclient/src/views/widgets/storefront/featured_content.dart';
 import 'package:steamclient/src/views/widgets/storefront/carousel.dart';
 import 'package:steamclient/src/views/widgets/hex_color.dart';
@@ -10,9 +11,7 @@ class StoreFront extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: RichText(
-          text: TextSpan(
-            text: 'Steam'
-          ),
+          text: TextSpan(text: 'Steam'),
         ),
         backgroundColor: HexColor('171a21'),
       ),
@@ -20,15 +19,7 @@ class StoreFront extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.blueGrey),
         child: new Column(
           children: <Widget>[
-            Material(
-              borderRadius: BorderRadius.all(Radius.circular(6)),
-              child: TextField(
-                onTap: () {
-                  print('On tap');
-                },
-                decoration: InputDecoration(hintText: 'Lalaland', border: InputBorder.none, contentPadding: const EdgeInsets.all(20.0))
-              ),
-            ),
+            SearchBar(),
             Flexible(child: new FeaturedContent()),
             Flexible(child: new Carousel())
           ],
