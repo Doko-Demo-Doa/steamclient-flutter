@@ -20,8 +20,8 @@ class StoreFront extends StatelessWidget {
         child: new Column(
           children: <Widget>[
             SearchBar(),
-            Flexible(child: new FeaturedContent()),
-            Flexible(child: new Carousel())
+            FeaturedContent(),
+            Carousel()
           ],
         ),
       ),
