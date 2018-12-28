@@ -9,6 +9,7 @@ class SteamClientApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new CupertinoApp(
       debugShowCheckedModeBanner: false,
+      title: 'Steam',
       home: new StoreFront()
     );
   }
