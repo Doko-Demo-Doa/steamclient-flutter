@@ -12,11 +12,11 @@ class Carousel extends StatelessWidget {
     ),
     new ConstrainedBox(
       constraints: BoxConstraints.expand(),
-      child: Image(image: NetworkImage(imageLink)),
+      child: Image(image: NetworkImage(imageLink), fit: BoxFit.cover),
     ),
     new ConstrainedBox(
       constraints: BoxConstraints.expand(),
-      child: Image(image: NetworkImage(imageLink)),
+      child: Image(image: NetworkImage(imageLink), fit: BoxFit.cover),
     )
   ];
 
@@ -25,7 +25,6 @@ class Carousel extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 200,
-      color: Colors.pink,
       child: PageView(
         children: _pages,
       ),
