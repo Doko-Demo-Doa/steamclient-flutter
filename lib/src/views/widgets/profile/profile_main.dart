@@ -25,7 +25,7 @@ class ProfileMain extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: HexColor('898989')))),
           Row(
             children: <Widget>[
-              Image(image: NetworkImage(imgLink)),
+              Image(image: NetworkImage(imgLink), width: 154, height: 154),
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
                 child: Column(
@@ -37,13 +37,15 @@ class ProfileMain extends StatelessWidget {
                       child: Row(
                         children: <Widget>[
                           Image(
-                            image: NetworkImage('https://steamcommunity-a.akamaihd.net/public/images/badges/27_steamawardnominations/level04_54.png'),
+                            image: NetworkImage(
+                                'https://steamcommunity-a.akamaihd.net/public/images/badges/27_steamawardnominations/level04_54.png'),
                             width: 60,
                             height: 60,
                           ),
                           Column(
                             children: <Widget>[
-                              Text('Steam Awards...', overflow: TextOverflow.ellipsis),
+                              Text('Steam Awards...',
+                                  overflow: TextOverflow.ellipsis),
                               Text('100 XP')
                             ],
                           )
@@ -58,7 +60,8 @@ class ProfileMain extends StatelessWidget {
                     RaisedButton.icon(
                       onPressed: () => {},
                       color: HexColor('2c3648'),
-                      shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0)),
                       label: Text(''),
                       icon: Icon(Icons.ac_unit),
                     ),
@@ -66,7 +69,9 @@ class ProfileMain extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          Text('Every treasure has its price', style: TextStyle(color: HexColor('#898989'))),
+          Text('View more info', style: TextStyle(color: HexColor('#FFFFFF')))
         ],
       ),
     );
