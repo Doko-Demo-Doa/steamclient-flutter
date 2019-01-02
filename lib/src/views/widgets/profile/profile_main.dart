@@ -25,15 +25,16 @@ class ProfileMain extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: HexColor('898989')))),
           Row(
             children: <Widget>[
-              Image(image: NetworkImage(imgLink), width: 154, height: 154),
-              Padding(
+              Image(image: NetworkImage(imgLink), width: 120, height: 120),
+              Expanded(
+                  child: Padding(
                 padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
                 child: Column(
                   children: <Widget>[
                     Text('Level 53'),
                     Container(
                       padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(color: HexColor('222223')),
+                      decoration: BoxDecoration(color: HexColor('222223'), borderRadius: BorderRadius.circular(4)),
                       child: Row(
                         children: <Widget>[
                           Image(
@@ -44,7 +45,7 @@ class ProfileMain extends StatelessWidget {
                           ),
                           Column(
                             children: <Widget>[
-                              Text('Steam Awards...',
+                              Text('Steam Awards 2018',
                                   overflow: TextOverflow.ellipsis),
                               Text('100 XP')
                             ],
@@ -52,25 +53,31 @@ class ProfileMain extends StatelessWidget {
                         ],
                       ),
                     ),
-                    RaisedButton(
-                      onPressed: () => {},
-                      color: HexColor('2c3648'),
-                      child: Text('Nah', style: TextStyle(color: Colors.white)),
-                    ),
-                    RaisedButton.icon(
-                      onPressed: () => {},
-                      color: HexColor('2c3648'),
-                      shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(30.0)),
-                      label: Text(''),
-                      icon: Icon(Icons.ac_unit),
+                    Row(
+                      children: <Widget>[
+                        RaisedButton(
+                          onPressed: () => {},
+                          color: HexColor('2c3648'),
+                          child: Text('Nah',
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                        RaisedButton.icon(
+                          onPressed: () => {},
+                          color: HexColor('2c3648'),
+                          shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(30.0)),
+                          label: Text(''),
+                          icon: Icon(Icons.ac_unit),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              )
+              )),
             ],
           ),
-          Text('Every treasure has its price', style: TextStyle(color: HexColor('#898989'))),
+          Text('Every treasure has its price',
+              style: TextStyle(color: HexColor('#898989'))),
           Text('View more info', style: TextStyle(color: HexColor('#FFFFFF')))
         ],
       ),
