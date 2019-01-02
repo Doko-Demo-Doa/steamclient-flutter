@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class CommentSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
       child: ListView.builder(
-        itemCount: 400,
+        itemCount: 2000,
         itemBuilder: (ctx, index) {
           final count = index + 1;
+          Random rnd;
+          int min = 400;
+          int max = 600;
+          rnd = new Random();
+          final r = min + rnd.nextInt(max - min);
+
           final maxWidth = MediaQuery.of(context).size.width;
           double commentMaxWidth = MediaQuery.of(context).size.width * 0.8;
 
@@ -24,7 +31,7 @@ class CommentSection extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/30/30f413ae08fab9dbda8cc0617ba8c960dc025f61.jpg'),
+                        'https://source.unsplash.com/random/600x' + r.toString()),
                   ),
                 ),
                 ConstrainedBox(
