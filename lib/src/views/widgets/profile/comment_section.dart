@@ -25,20 +25,23 @@ class CommentSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                   color: Colors.yellow,
                   child: Image(
                     width: 60,
                     height: 60,
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        'https://source.unsplash.com/random/600x' + r.toString()),
+                        'https://source.unsplash.com/random/600x' +
+                            r.toString()),
                   ),
                 ),
                 ConstrainedBox(
                   constraints: BoxConstraints(maxWidth: commentMaxWidth),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Tak-kun'),
+                      Text('Test user', textAlign: TextAlign.left),
                       Text(
                           'CommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentComment')
                     ],
