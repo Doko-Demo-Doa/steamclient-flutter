@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:steamclient/src/views/widgets/hex_color.dart';
+import 'package:steamclient/views/widgets/hex_color.dart';
 
 class _CustomSearchBarState extends State<SearchBar> {
   final textController = TextEditingController();

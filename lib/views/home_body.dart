@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:steamclient/src/views/home_list.dart';
+import 'package:steamclient/views/home_list.dart';
 
 class SteamBody extends StatelessWidget {
   @override

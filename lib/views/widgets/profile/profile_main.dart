@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:steamclient/src/views/widgets/hex_color.dart';
+import 'package:steamclient/views/widgets/hex_color.dart';
 
 class ProfileMain extends StatelessWidget {
   final imgLink =

@@ -1,4 +1,4 @@
-import 'package:steamclient/src/api/factory_steamstore.dart';
+import 'package:steamclient/api/factory_steamstore.dart';
 
 class ApiProduct {
   static void getLatestProduct() {

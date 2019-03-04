@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:steamclient/src/views/widgets/storefront/search_bar.dart';
-import 'package:steamclient/src/views/widgets/storefront/featured_content.dart';
-import 'package:steamclient/src/views/widgets/storefront/carousel.dart';
-import 'package:steamclient/src/views/widgets/hex_color.dart';
+import 'package:steamclient/views/widgets/storefront/search_bar.dart';
+import 'package:steamclient/views/widgets/storefront/featured_content.dart';
+import 'package:steamclient/views/widgets/storefront/carousel.dart';
+import 'package:steamclient/views/widgets/hex_color.dart';
 
 class StoreFront extends StatelessWidget {
   @override

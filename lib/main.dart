@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:steamclient/src/views/screens/storefront.dart';
-import 'package:steamclient/src/views/screens/profile.dart';
+import 'package:steamclient/views/screens/storefront.dart';
+import 'package:steamclient/views/screens/profile.dart';
 
 
 void main() => runApp(SteamClientApp());
