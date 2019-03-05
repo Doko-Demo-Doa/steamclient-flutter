@@ -7,6 +7,9 @@ class ProfileMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final buttonWidth = MediaQuery.of(context).size.width * 0.25;
+    final buttonHeight = 40.0;
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(12, 36, 12, 12),
@@ -25,16 +28,26 @@ class ProfileMain extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: HexColor('898989')))),
           Row(
             children: <Widget>[
-              Image(image: NetworkImage(imgLink), width: 120, height: 120),
+              Image(image: NetworkImage(imgLink), width: 150, height: 150),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
                 child: Column(
                   children: <Widget>[
-                    Text('Level 53'),
+                    Row(children: <Widget>[
+                      Text("Level    ", style: TextStyle(color: Colors.white, fontSize: 20)),
+                      Container(
+                        child: Text('53', style: TextStyle(color: Colors.white)),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent), borderRadius: BorderRadius.circular(60)),
+                      )
+                    ]),
                     Container(
+                      margin: EdgeInsets.symmetric(vertical: 9, horizontal: 0),
                       padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(color: HexColor('222223'), borderRadius: BorderRadius.circular(4)),
+                      decoration: BoxDecoration(
+                          color: HexColor('222223'),
+                          borderRadius: BorderRadius.circular(4)),
                       child: Row(
                         children: <Widget>[
                           Image(
@@ -46,8 +59,10 @@ class ProfileMain extends StatelessWidget {
                           Column(
                             children: <Widget>[
                               Text('Steam Awards 2018',
+                                  style: TextStyle(color: Colors.white),
                                   overflow: TextOverflow.ellipsis),
-                              Text('100 XP')
+                              Text('100 XP',
+                                  style: TextStyle(color: Colors.white))
                             ],
                           )
                         ],
@@ -55,20 +70,15 @@ class ProfileMain extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        RaisedButton(
-                          onPressed: () => {},
-                          color: HexColor('2c3648'),
-                          child: Text('Nah',
-                              style: TextStyle(color: Colors.white)),
-                        ),
-                        RaisedButton.icon(
-                          onPressed: () => {},
-                          color: HexColor('2c3648'),
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0)),
-                          label: Text(''),
-                          icon: Icon(Icons.ac_unit),
-                        ),
+                        SizedBox(
+                          child: FlatButton(
+                              onPressed: () {},
+                              color: HexColor('2c3648'),
+                              child: Text('Edit Profile',
+                                  style: TextStyle(color: Colors.white))),
+                          width: buttonWidth,
+                          height: buttonHeight,
+                        )
                       ],
                     ),
                   ],
@@ -76,6 +86,7 @@ class ProfileMain extends StatelessWidget {
               )),
             ],
           ),
+          Padding(padding: const EdgeInsets.all(12)),
           Text('Every treasure has its price',
               style: TextStyle(color: HexColor('#898989'))),
           Text('View more info', style: TextStyle(color: HexColor('#FFFFFF')))
