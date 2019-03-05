@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:steamclient/views/widgets/hex_color.dart';
 
 class CommentSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
+        child: Container(
+          decoration: BoxDecoration(color: HexColor('#141414')),
       child: ListView.builder(
         itemCount: 2000,
         itemBuilder: (ctx, index) {
-          final count = index + 1;
           Random rnd;
           int min = 400;
           int max = 600;
@@ -16,7 +18,6 @@ class CommentSection extends StatelessWidget {
           final r = min + rnd.nextInt(max - min);
 
           final maxWidth = MediaQuery.of(context).size.width;
-          double commentMaxWidth = MediaQuery.of(context).size.width * 0.8;
 
           return ConstrainedBox(
             constraints: BoxConstraints(maxWidth: maxWidth),
@@ -25,7 +26,7 @@ class CommentSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                  margin: const EdgeInsets.fromLTRB(12, 0, 22, 16),
                   color: Colors.yellow,
                   child: Image(
                     width: 60,
@@ -36,14 +37,12 @@ class CommentSection extends StatelessWidget {
                             r.toString()),
                   ),
                 ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: commentMaxWidth),
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Test user', textAlign: TextAlign.left),
-                      Text(
-                          'CommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentComment')
+                      Text('Test user', textAlign: TextAlign.left, style: TextStyle(color: Colors.white)),
+                      Text('CommentCommentComment', style: TextStyle(color: Colors.white))
                     ],
                   ),
                 )
@@ -52,6 +51,6 @@ class CommentSection extends StatelessWidget {
           );
         },
       ),
-    );
+    ));
   }
 }
