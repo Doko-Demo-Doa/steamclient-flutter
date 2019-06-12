@@ -4,7 +4,7 @@ class ApiClientSteamStore {
   static String baseUrl = 'https://store.steampowered.com/api/';
   static final defaultPort = 80;
 
-  static Options options = new Options(
+  static BaseOptions options = new BaseOptions(
     baseUrl: baseUrl,
     connectTimeout: 5000,
     receiveTimeout: 3000
