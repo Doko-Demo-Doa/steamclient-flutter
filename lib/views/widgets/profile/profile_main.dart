@@ -7,7 +7,7 @@ class ProfileMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buttonWidth = MediaQuery.of(context).size.width * 0.25;
+    final buttonWidth = MediaQuery.of(context).size.width * 0.3;
     final buttonHeight = 40.0;
 
     return Container(
@@ -28,18 +28,18 @@ class ProfileMain extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: HexColor('898989')))),
           Row(
             children: <Widget>[
-              Image(image: NetworkImage(imgLink), width: 150, height: 150),
+              Image(image: NetworkImage(imgLink), width: 120, height: 120),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
                 child: Column(
                   children: <Widget>[
                     Row(children: <Widget>[
-                      Text("Level    ", style: TextStyle(color: Colors.white, fontSize: 20)),
+                      Text("Level  ", style: TextStyle(color: Colors.white, fontSize: 25)),
                       Container(
                         child: Text('53', style: TextStyle(color: Colors.white)),
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent), borderRadius: BorderRadius.circular(60)),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent), borderRadius: BorderRadius.circular(40)),
                       )
                     ]),
                     Container(
@@ -53,16 +53,17 @@ class ProfileMain extends StatelessWidget {
                           Image(
                             image: NetworkImage(
                                 'https://steamcommunity-a.akamaihd.net/public/images/badges/27_steamawardnominations/level04_54.png'),
-                            width: 60,
-                            height: 60,
+                            width: 40,
+                            height: 40,
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text('Steam Awards 2018',
                                   style: TextStyle(color: Colors.white),
                                   overflow: TextOverflow.ellipsis),
                               Text('100 XP',
-                                  style: TextStyle(color: Colors.white))
+                                  style: TextStyle(color: Colors.blueGrey))
                             ],
                           )
                         ],
