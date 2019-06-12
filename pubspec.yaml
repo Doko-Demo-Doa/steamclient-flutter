@@ -16,7 +16,6 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: any
-  dart_json_mapper: any
   dio: any
   color: any
 
@@ -25,6 +24,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
+  image_test_utils: ^1.0.0
   flutter_test:
     sdk: flutter
 

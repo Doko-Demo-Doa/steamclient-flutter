@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:steamclient/views/widgets/hex_color.dart';
 
 class CommentSection extends StatelessWidget {
@@ -11,12 +10,6 @@ class CommentSection extends StatelessWidget {
       child: ListView.builder(
         itemCount: 2000,
         itemBuilder: (ctx, index) {
-          Random rnd;
-          int min = 400;
-          int max = 600;
-          rnd = new Random();
-          final r = min + rnd.nextInt(max - min);
-
           final maxWidth = MediaQuery.of(context).size.width;
 
           return ConstrainedBox(
@@ -33,8 +26,8 @@ class CommentSection extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        'https://source.unsplash.com/random/600x' +
-                            r.toString()),
+                        'https://images-ext-2.discordapp.net/external/7Pwwon3ALV0GsgZDKALhaQv-2zY4Ml77G8cl_OrfJDM/http/images.nintendolife.com/news/2019/06/nintendos_market_value_drops_by_usd1_billion_after_animal_crossing_switch_delay/large.jpg'
+                    ),
                   ),
                 ),
                 Expanded(
