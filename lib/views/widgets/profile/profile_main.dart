@@ -12,7 +12,7 @@ class ProfileMain extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(12, 36, 12, 12),
+      padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
       decoration: BoxDecoration(color: HexColor('272d3b')),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
