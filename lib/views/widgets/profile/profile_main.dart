@@ -37,7 +37,7 @@ class ProfileMain extends StatelessWidget {
                     Row(children: <Widget>[
                       Text("Level  ", style: TextStyle(color: Colors.white, fontSize: 25)),
                       Container(
-                        child: Text('53', style: TextStyle(color: Colors.white)),
+                        child: Text('57', style: TextStyle(color: Colors.white)),
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent), borderRadius: BorderRadius.circular(40)),
                       )

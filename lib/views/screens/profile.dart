@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:steamclient/views/widgets/custom_drawer.dart';
 import 'package:steamclient/views/widgets/hex_color.dart';
 import '../widgets/profile/profile_main.dart';
 import '../widgets/profile/comment_section.dart';
@@ -10,9 +11,7 @@ class ProfileWidgetState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: Drawer(
-        child: null,
-      ),
+      drawer: Drawer(child: new CustomDrawer()),
       appBar: new AppBar(
         centerTitle: true,
         title: new Image.network('https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/header_logo.png', height: 28),
