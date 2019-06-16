@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:steamclient/views/widgets/custom_drawer.dart';
+import 'package:steamclient/views/widgets/drawer/custom_drawer.dart';
 import 'package:steamclient/views/widgets/hex_color.dart';
 import '../widgets/profile/profile_main.dart';
 import '../widgets/profile/comment_section.dart';
