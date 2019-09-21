@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:steamclient/views/screens/storefront.dart';
-import 'package:steamclient/views/screens/profile.dart';
-
+import 'package:steamclient/views/screens/storefront.dart';
 
 void main() => runApp(SteamClientApp());
 
@@ -11,7 +9,7 @@ class SteamClientApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Steam',
-      home: new Profile()
+      home: new StoreFront()
     );
   }
 }

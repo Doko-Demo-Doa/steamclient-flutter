@@ -23,12 +23,13 @@ class _CustomSearchBarState extends State<SearchBar> {
             onTap: () {
               print('On tap');
             },
+            style: TextStyle(color: Colors.white),
             controller: textController,
             decoration: InputDecoration(
                 hintText: 'Search the store',
                 border: InputBorder.none,
                 filled: true,
-                fillColor: HexColor('70a2c0'),
+                fillColor: HexColor('#416F9F'),
                 contentPadding: const EdgeInsets.all(8.0))),
       ),
     );

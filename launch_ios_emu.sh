@@ -1,0 +1,1 @@
+flutter emulators --launch apple_ios_simulator
