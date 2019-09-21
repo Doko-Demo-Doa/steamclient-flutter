@@ -21,7 +21,7 @@ class ProfileWidgetState extends State<Profile> {
           },
           child: Icon(Icons.menu, color: Colors.white),
         ),
-        backgroundColor: HexColor('171A21'),
+        backgroundColor: HexColor('#171A21'),
       ),
       body: Flex(
         direction: Axis.vertical,

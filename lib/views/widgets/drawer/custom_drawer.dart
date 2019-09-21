@@ -50,8 +50,12 @@ class CustomDrawer extends StatelessWidget {
                   children: <Widget>[
                     ClipRRect(
                         borderRadius: BorderRadius.circular(4),
-                        child:
-                            Image.network(AVATAR_LINK, width: 40, height: 40)),
+                        child: GestureDetector(
+                            onTap: () => {
+                                  // Code...
+                                },
+                            child: Image.network(AVATAR_LINK,
+                                width: 40, height: 40))),
                     Padding(padding: const EdgeInsets.only(left: 20)),
                     Text('Doko',
                         style:
