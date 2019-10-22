@@ -15,21 +15,33 @@ class StoreFront extends StatelessWidget {
       key: _scaffoldKey,
       drawer: Drawer(child: new CustomDrawer()),
       appBar: AppBar(
-        backgroundColor: HexColor('171a21'),
+        backgroundColor: HexColor('#171a21'),
         centerTitle: true,
-        title: SearchBar(),
         leading: IconButton(
             icon: Icon(
               Icons.menu,
               color: Colors.white,
             ),
             tooltip: 'Test',
-            onPressed: () => {
-              _scaffoldKey.currentState.openDrawer()
-            }),
+            onPressed: () => {_scaffoldKey.currentState.openDrawer()}),
+        title: SearchBar(),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              tooltip: 'Search',
+              onPressed: () => {_scaffoldKey.currentState.openDrawer()}),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(color: HexColor('#213E57')),
+        child: Column(
+          children: <Widget>[
+            Carousel()
+          ],
+        ),
       ),
     );
   }
