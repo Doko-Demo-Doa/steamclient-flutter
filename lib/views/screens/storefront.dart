@@ -40,7 +40,7 @@ class StoreFront extends StatelessWidget {
         decoration: BoxDecoration(color: HexColor('#213E57')),
         child: Column(
           children: <Widget>[
-            SectionHeader(),
+            SectionHeader('Test'),
             Carousel()
           ],
         ),

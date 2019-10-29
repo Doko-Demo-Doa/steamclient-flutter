@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
 class SectionHeader extends StatelessWidget {
+  final text;
+  SectionHeader(this.text);
+
   @override
   Widget build(BuildContext context) {
     return Container(
