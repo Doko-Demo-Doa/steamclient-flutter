@@ -8,7 +8,7 @@ class Carousel extends StatelessWidget {
   final List<Widget> _pages = <Widget>[
     new ConstrainedBox(
       constraints: BoxConstraints.expand(),
-      child: Image(image: NetworkImage(imageLink), fit: BoxFit.cover),
+      child: Image(image: NetworkImage('https://steamcdn-a.akamaihd.net/steam/apps/1121560/capsule_616x353.jpg?t=1572307828'), fit: BoxFit.cover),
     ),
     new ConstrainedBox(
       constraints: BoxConstraints.expand(),
