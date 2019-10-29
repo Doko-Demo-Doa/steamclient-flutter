@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/utils/utils_colors.dart';
-import 'package:steamclient/views/widgets/hex_color.dart';
 // New Releases, Specials, Free Games, By User Tags buttons.
 
 class TypeButton extends StatelessWidget {
