@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/views/screens/app_page.dart';
-import 'package:steamclient/views/screens/storefront.dart';
 import 'package:steamclient/views/widgets/hex_color.dart';
 import 'package:provider/provider.dart';
+
+import 'package:steamclient/common/static_data.dart' as routes;
+import 'package:steamclient/router.dart' as router;
 
 void main() => runApp(SteamClientApp());
 
@@ -16,7 +18,9 @@ class SteamClientApp extends StatelessWidget {
           title: 'Steam',
           theme: ThemeData(primarySwatch: Colors.blueGrey),
           color: HexColor('#213E57'),
-          home: new AppPage()),
+          onGenerateRoute: router.generateRoute,
+          initialRoute: routes.StoreFrontRoute,
+        ),
     );
   }
 }

@@ -30,7 +30,7 @@ class TypeButtons extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Row(children: <Widget>[
-              TypeButton('New Releases', onPressed: () => print(34343)),
+              TypeButton('New Releases', onPressed: () => Navigator.pushNamed(context, "AppPage")),
               TypeButton('Specials', onPressed: () => print(34343)),
             ], mainAxisAlignment: MainAxisAlignment.spaceAround),
             Row(children: <Widget>[

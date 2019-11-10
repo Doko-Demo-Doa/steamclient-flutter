@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class AppPage extends StatelessWidget {
+  final String appId;
+
+  AppPage(this.appId);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
