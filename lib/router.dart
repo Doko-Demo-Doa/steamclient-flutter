@@ -15,6 +15,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       var appId = settings.arguments as String;
       return MaterialPageRoute(builder: (_) => AppPage(appId));
     default:
-      return MaterialPageRoute(builder: (_) => StoreFront());
+      return MaterialPageRoute(
+          builder: (_) => Scaffold(
+                body: Center(
+                  child: Text('No path for ${settings.name}'),
+                ),
+              ));
   }
 }

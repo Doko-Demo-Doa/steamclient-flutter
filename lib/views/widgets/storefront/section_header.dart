@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {
   final text;
@@ -9,7 +9,7 @@ class SectionHeader extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
       alignment: Alignment.centerLeft,
-      child: Text('FEATURED & RECOMMENDED', style: TextStyle(color: CupertinoColors.white)),
+      child: Text('FEATURED & RECOMMENDED', style: TextStyle(color: Colors.white)),
     );
   }
 }

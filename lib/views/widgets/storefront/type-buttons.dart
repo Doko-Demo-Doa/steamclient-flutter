@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/utils/utils_colors.dart';
-// New Releases, Specials, Free Games, By User Tags buttons.
 
+// New Releases, Specials, Free Games, By User Tags buttons.
 class TypeButton extends StatelessWidget {
   final title;
   final onPressed;
