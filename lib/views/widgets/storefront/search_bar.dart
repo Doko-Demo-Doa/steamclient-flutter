@@ -13,7 +13,7 @@ class _CustomSearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 4.0),
+      margin: EdgeInsets.symmetric(vertical: 3.0),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(4)),
           border: Border.all(color: HexColor('415d6f'))),
@@ -25,12 +25,12 @@ class _CustomSearchBarState extends State<SearchBar> {
             style: TextStyle(color: Colors.white),
             controller: textController,
             decoration: InputDecoration(
-                hintText: 'Search the store',
+                hintText: 'Search the stores',
                 border: InputBorder.none,
                 hintStyle: TextStyle(fontStyle: FontStyle.italic),
                 filled: true,
                 fillColor: HexColor('#416F9F'),
-                contentPadding: const EdgeInsets.all(8.0))),
+                contentPadding: const EdgeInsets.all(3.0))),
       ),
     );
   }
