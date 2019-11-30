@@ -4,7 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
-import 'package:steamclient/views/steam_guard.dart';
+import 'package:steamclient/views/screens/steam_guard.dart';
+import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 
 class _TabLayoutState extends State<SteamTablayout> {
   int _currentTabIndex = 0;
@@ -24,7 +25,9 @@ class _TabLayoutState extends State<SteamTablayout> {
       body: _kTabPages[_currentTabIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
-        selectedItemColor: Colors.blueAccent,
+        backgroundColor: PredefinedColors.ALMOST_BLACK,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white30,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           // if (index == 2) {
