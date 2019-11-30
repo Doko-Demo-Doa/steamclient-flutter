@@ -12,8 +12,37 @@ class _TabLayoutState extends State<SteamTablayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Image.asset('assets/header_logo.png', height: 36),
+          title: Image.asset('assets/images/header_logo.png', height: 36),
           centerTitle: true),
+      body: _kTabPages[_currentTabIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTabIndex,
+        fixedColor: Colors.red,
+        type: BottomNavigationBarType.fixed,
+        onTap: (index) {
+          if (index == 2) {
+            Navigator.of(context)
+                .push(new MaterialPageRoute(builder: (ctx) => StoreFront()));
+          }
+          setState(() {
+            _currentTabIndex = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.touch_app),
+            title: Text('さがす'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('トップ'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('マイページ'),
+          )
+        ],
+      ),
     );
   }
 }
