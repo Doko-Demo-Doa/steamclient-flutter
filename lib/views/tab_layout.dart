@@ -31,13 +31,21 @@ class _TabLayoutState extends State<SteamTablayout> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.touch_app),
-            title: Text('さがす'),
+            title: Text('Guard'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('トップ'),
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('マイページ'),
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('マイページ'),
+          ),
+           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             title: Text('マイページ'),
           )
