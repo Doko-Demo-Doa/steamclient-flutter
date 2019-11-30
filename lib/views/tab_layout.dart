@@ -18,6 +18,8 @@ class _TabLayoutState extends State<SteamTablayout> {
 
   @override
   Widget build(BuildContext context) {
+    const commonTextStyle = TextStyle(fontSize: 12);
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -43,23 +45,23 @@ class _TabLayoutState extends State<SteamTablayout> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.shieldAlt),
-            title: Text('Guard'),
+            title: Text('Guard', style: commonTextStyle),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.supervisor_account),
-            title: Text('Profile'),
+            title: Text('Profile', style: commonTextStyle),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            title: Text('Store'),
+            title: Text('Store', style: commonTextStyle),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            title: Text('Chat'),
+            title: Text('Chat', style: commonTextStyle),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
-            title: Text('Library'),
+            title: Text('Library', style: commonTextStyle),
           )
         ],
       ),
