@@ -20,6 +20,7 @@ class _TabLayoutState extends State<SteamTablayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: PredefinedColors.ALMOST_BLACK,
           title: Image.asset('assets/images/header_logo.png', height: 36),
           centerTitle: true),
       body: _kTabPages[_currentTabIndex],

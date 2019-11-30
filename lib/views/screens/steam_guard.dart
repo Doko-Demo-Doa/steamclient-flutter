@@ -11,16 +11,17 @@ class SteamGuard extends StatelessWidget {
       color: PredefinedColors.DARK,
       child: Column(
         children: <Widget>[
-          Text('2K44Z', style: TextStyle(fontSize: 54, color: Colors.white)),
+          Text('2K44Z', style: TextStyle(fontSize: 54, color: Colors.white, fontWeight: FontWeight.bold)),
           Padding(
             padding: const EdgeInsetsDirectional.only(top: 30),
           ),
           CircularPercentIndicator(
-            radius: 120.0,
-            lineWidth: 5.0,
-            percent: 0.4,
-            center: new Text("100%", style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.grey,
+            radius: 220.0,
+            lineWidth: 8.0,
+            startAngle: 180,
+            percent: 0.7,
+            center: new Text("0:25", style: TextStyle(color: Colors.white, fontSize: 42)),
+            backgroundColor: PredefinedColors.DARK_GREY_BLUE,
             progressColor: PredefinedColors.DUSTY_ORANGE,
             circularStrokeCap: CircularStrokeCap.round,
           )
