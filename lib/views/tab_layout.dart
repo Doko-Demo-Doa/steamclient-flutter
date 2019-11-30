@@ -1,12 +1,19 @@
 // This is actually a wrapper for another 5 screens: Guard, Profile, Store, Chat, Account
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
+import 'package:steamclient/views/steam_guard.dart';
 
 class _TabLayoutState extends State<SteamTablayout> {
   int _currentTabIndex = 0;
-  final _kTabPages = <Widget>[StoreFront(), Profile(), AppPage('2222')];
+  final _kTabPages = <Widget>[
+    SteamGuard(),
+    StoreFront(),
+    Profile(),
+    AppPage('2222')
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,37 +24,37 @@ class _TabLayoutState extends State<SteamTablayout> {
       body: _kTabPages[_currentTabIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
-        fixedColor: Colors.red,
+        selectedItemColor: Colors.blueAccent,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
-          if (index == 2) {
-            Navigator.of(context)
-                .push(new MaterialPageRoute(builder: (ctx) => StoreFront()));
-          }
+          // if (index == 2) {
+          //   Navigator.of(context)
+          //       .push(new MaterialPageRoute(builder: (ctx) => StoreFront()));
+          // }
           setState(() {
             _currentTabIndex = index;
           });
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.touch_app),
+            icon: Icon(FontAwesomeIcons.shieldAlt),
             title: Text('Guard'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('トップ'),
+            icon: Icon(Icons.supervisor_account),
+            title: Text('Profile'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('マイページ'),
+            icon: Icon(Icons.shopping_cart),
+            title: Text('Store'),
           ),
-           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('マイページ'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            title: Text('Chat'),
           ),
-           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('マイページ'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text('Library'),
           )
         ],
       ),
