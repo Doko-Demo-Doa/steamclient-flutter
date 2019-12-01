@@ -10,3 +10,5 @@ HexColor DARK_BLUE_GREY = HexColor('#18364E');
 HexColor DUSTY_ORANGE = HexColor('#F18623');
 HexColor LIGHT_NAVY_BLUE = HexColor('#2F6181');
 HexColor GUNMETAL = HexColor('#505A66');
+HexColor DIRTY_GREEN = HexColor('#5E7628');
+HexColor PEA_GREEN = HexColor('#94AA0E');

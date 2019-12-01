@@ -7,7 +7,9 @@ class ProfileWidgetState extends State<Profile> {
   Widget build(BuildContext context) {
     return Flex(
       direction: Axis.vertical,
-      children: <Widget>[ProfileMain(), CommentSection()],
+      children: <Widget>[
+        ProfileMain(), CommentSection()
+      ],
     );
   }
 }

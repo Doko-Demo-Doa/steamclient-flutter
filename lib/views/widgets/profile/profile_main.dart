@@ -1,5 +1,6 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:steamclient/views/widgets/hex_color.dart';
+import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 
 class ProfileMain extends StatelessWidget {
   final imgLink =
@@ -7,90 +8,94 @@ class ProfileMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buttonWidth = MediaQuery.of(context).size.width * 0.3;
-    final buttonHeight = 40.0;
+    final double AVATAR_SIZE = 140.0;
 
     return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
-      decoration: BoxDecoration(color: HexColor('272d3b')),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+      color: PredefinedColors.DARK,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+      child: Row(
         children: <Widget>[
-          Padding(
-              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-              child: Text('Doko',
-                  style: TextStyle(fontSize: 26, color: Colors.white))),
-          Padding(
-              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-              child: Text('Quân, Hà Nội - Việt Nam',
-                  style: TextStyle(fontSize: 16, color: HexColor('898989')))),
-          Row(
+          // Left: avatar
+          Column(
             children: <Widget>[
-              Image(image: NetworkImage(imgLink), width: 120, height: 120),
-              Expanded(
-                  child: Padding(
-                padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
-                child: Column(
-                  children: <Widget>[
-                    Row(children: <Widget>[
-                      Text("Level  ", style: TextStyle(color: Colors.white, fontSize: 25)),
-                      Container(
-                        child: Text('57', style: TextStyle(color: Colors.white)),
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent), borderRadius: BorderRadius.circular(40)),
-                      )
-                    ]),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 9, horizontal: 0),
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          color: HexColor('222223'),
-                          borderRadius: BorderRadius.circular(4)),
-                      child: Row(
-                        children: <Widget>[
-                          Image(
-                            image: NetworkImage(
-                                'https://steamcommunity-a.akamaihd.net/public/images/badges/27_steamawardnominations/level04_54.png'),
-                            width: 40,
-                            height: 40,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Steam Awards 2018',
-                                  style: TextStyle(color: Colors.white),
-                                  overflow: TextOverflow.ellipsis),
-                              Text('100 XP',
-                                  style: TextStyle(color: Colors.blueGrey))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        SizedBox(
-                          child: FlatButton(
-                              onPressed: () {},
-                              color: HexColor('2c3648'),
-                              child: Text('Edit Profile',
-                                  style: TextStyle(color: Colors.white))),
-                          width: buttonWidth,
-                          height: buttonHeight,
-                        )
-                      ],
-                    ),
-                  ],
+              Container(
+                width: AVATAR_SIZE,
+                height: AVATAR_SIZE,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        width: 3, color: PredefinedColors.DIRTY_GREEN),
+                    shape: BoxShape.circle),
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(imgLink),
                 ),
-              )),
+              ),
+              Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          width: 2, color: PredefinedColors.DARK_BLUE_GREY),
+                      borderRadius:
+                          BorderRadius.all(new Radius.circular(20.0))),
+                  margin: const EdgeInsetsDirectional.only(top: 14),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 22, vertical: 4),
+                  constraints: BoxConstraints(maxWidth: 160),
+                  child: Text(
+                    'Geo Stella',
+                    overflow: TextOverflow.fade,
+                    maxLines: 1,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ))
             ],
           ),
-          Padding(padding: const EdgeInsets.all(12)),
-          Text('Every treasure has its price',
-              style: TextStyle(color: HexColor('#898989'))),
-          Text('View more info', style: TextStyle(color: HexColor('#FFFFFF')))
+          // Right: Overview
+          Expanded(
+              flex: 2,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  // 2 statistic items:
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      OutlineButton(
+                        onPressed: () {},
+                        child: new Text("22",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18)),
+                        shape: CircleBorder(),
+                        padding: const EdgeInsets.all(12),
+                        borderSide:
+                            BorderSide(color: PredefinedColors.LIGHT_NAVY_BLUE),
+                      ),
+                      OutlineButton(
+                        onPressed: () {},
+                        child: new Text("22",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18)),
+                        shape: CircleBorder(),
+                        padding: const EdgeInsets.all(12),
+                        borderSide:
+                            BorderSide(color: PredefinedColors.LIGHT_NAVY_BLUE),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    "Playing: Call of Duty Modern Warfare 3",
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                        fontSize: 16.0, color: PredefinedColors.PEA_GREEN),
+                  ),
+                  Padding(padding: const EdgeInsetsDirectional.only(top: 12)),
+                  Text(
+                    "Frankfuit, Germany",
+                    style: TextStyle(
+                        fontSize: 14.0, color: PredefinedColors.GUNMETAL),
+                  )
+                ],
+              )),
         ],
       ),
     );
