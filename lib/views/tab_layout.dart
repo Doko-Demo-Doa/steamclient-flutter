@@ -1,6 +1,8 @@
 // This is actually a wrapper for another 5 screens: Guard, Profile, Store, Chat, Account
+// It should have its own navigator.
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:steamclient/services/navigation_service.dart';
 import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
@@ -12,8 +14,8 @@ class _TabLayoutState extends State<SteamTablayout>
   int _currentTabIndex = 0;
   final _kTabPages = <Widget>[
     SteamGuard(),
-    StoreFront(),
     Profile(),
+    StoreFront(),
     AppPage('2222')
   ];
 
@@ -39,10 +41,10 @@ class _TabLayoutState extends State<SteamTablayout>
         unselectedItemColor: Colors.white30,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
-          // if (index == 2) {
-          //   Navigator.of(context)
-          //       .push(new MaterialPageRoute(builder: (ctx) => StoreFront()));
-          // }
+          if (index == 4) {
+            Navigator.pushNamed(context, 'Login');
+            return;
+          }
           setState(() {
             _currentTabIndex = index;
           });

@@ -8,4 +8,5 @@ HexColor DARK_BLUE = HexColor('#15243C');
 HexColor DARK_GREY_BLUE = HexColor('#2A4652');
 HexColor DARK_BLUE_GREY = HexColor('#18364E');
 HexColor DUSTY_ORANGE = HexColor('#F18623');
+HexColor LIGHT_NAVY_BLUE = HexColor('#2F6181');
 HexColor GUNMETAL = HexColor('#505A66');

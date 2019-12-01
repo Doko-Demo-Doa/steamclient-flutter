@@ -65,6 +65,47 @@ class LoginScreen extends StatelessWidget {
                       hintText: 'Password',
                       hintStyle: TextStyle(color: PredefinedColors.GUNMETAL)),
                   maxLength: 32,
+                ),
+                ConstrainedBox(
+                  constraints: BoxConstraints(minWidth: 120, maxWidth: 230),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 62)),
+                      FlatButton(
+                        color: PredefinedColors.DARK_BLUE_GREY,
+                        onPressed: () {},
+                        child: Text(
+                          'Login',
+                          style: TextStyle(color: Colors.white54),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 16)),
+                      FlatButton(
+                        color: PredefinedColors.LIGHT_NAVY_BLUE,
+                        onPressed: () {},
+                        child: Text(
+                          'Signup',
+                          style: TextStyle(color: Colors.white54),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 42)),
+                      FlatButton(
+                        color: Colors.transparent,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          'Go Back',
+                          style: TextStyle(color: Colors.white54),
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             ))

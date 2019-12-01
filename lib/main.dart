@@ -23,6 +23,9 @@ class SteamClientApp extends StatelessWidget {
           theme: ThemeData(primarySwatch: Colors.blueGrey, backgroundColor: Colors.grey[800]),
           navigatorKey: locator<NavigationService>().navigatorKey,
           onGenerateRoute: router.generateRoute,
+          onUnknownRoute: (settings) => MaterialPageRoute(
+            builder: (context) => Text('Nothing')
+          ),
           initialRoute: routes.SteamTablayout,
         ),
     );
