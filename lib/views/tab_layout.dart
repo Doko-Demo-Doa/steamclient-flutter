@@ -7,7 +7,8 @@ import 'package:steamclient/views/screens/storefront.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 
-class _TabLayoutState extends State<SteamTablayout> {
+class _TabLayoutState extends State<SteamTablayout>
+    with TickerProviderStateMixin<SteamTablayout> {
   int _currentTabIndex = 0;
   final _kTabPages = <Widget>[
     SteamGuard(),
@@ -19,14 +20,18 @@ class _TabLayoutState extends State<SteamTablayout> {
   @override
   Widget build(BuildContext context) {
     const commonTextStyle = TextStyle(fontSize: 12);
+    // _kTabPages[_currentTabIndex]
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: PredefinedColors.ALMOST_BLACK,
+          elevation: 0,
+          backgroundColor: PredefinedColors.ALMOST_BLACK,
           title: Image.asset('assets/images/header_logo.png', height: 36),
           centerTitle: true),
-      body: _kTabPages[_currentTabIndex],
+      body: IndexedStack(
+        index: _currentTabIndex,
+        children: _kTabPages,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
         backgroundColor: PredefinedColors.ALMOST_BLACK,
