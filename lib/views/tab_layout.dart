@@ -26,6 +26,21 @@ class _TabLayoutState extends State<SteamTablayout>
     return Scaffold(
       appBar: AppBar(
           elevation: 0,
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(1.5),
+            child: Container(
+              height: 1.5,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: [
+                    PredefinedColors.ALMOST_BLACK,
+                    Colors.white,
+                    PredefinedColors.ALMOST_BLACK
+                  ])),
+            ),
+          ),
           backgroundColor: PredefinedColors.ALMOST_BLACK,
           title: Image.asset('assets/images/header_logo.png', height: 36),
           centerTitle: true),
