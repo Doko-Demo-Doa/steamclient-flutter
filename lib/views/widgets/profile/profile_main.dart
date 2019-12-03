@@ -37,7 +37,7 @@ class ProfileMain extends StatelessWidget {
                           BorderRadius.all(new Radius.circular(20.0))),
                   margin: const EdgeInsetsDirectional.only(top: 14),
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 22, vertical: 4),
+                      const EdgeInsets.symmetric(horizontal: 22, vertical: 6),
                   constraints: BoxConstraints(maxWidth: 160),
                   child: Text(
                     'Geo Stella',
@@ -60,28 +60,41 @@ class ProfileMain extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      OutlineButton(
-                        onPressed: () {},
-                        child: new Text("22",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18)),
-                        shape: CircleBorder(),
-                        padding: const EdgeInsets.all(12),
-                        borderSide:
-                            BorderSide(color: PredefinedColors.LIGHT_NAVY_BLUE),
+                      Column(
+                        children: <Widget>[
+                          OutlineButton(
+                            onPressed: () {},
+                            child: new Text("22",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18)),
+                            shape: CircleBorder(),
+                            padding: const EdgeInsets.all(12),
+                            borderSide: BorderSide(
+                                color: PredefinedColors.LIGHT_NAVY_BLUE),
+                          ),
+                          Padding(padding: const EdgeInsets.only(bottom: 6)),
+                          Text('Level')
+                        ],
                       ),
-                      OutlineButton(
-                        onPressed: () {},
-                        child: new Text("22",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18)),
-                        shape: CircleBorder(),
-                        padding: const EdgeInsets.all(12),
-                        borderSide:
-                            BorderSide(color: PredefinedColors.LIGHT_NAVY_BLUE),
+                      Column(
+                        children: <Widget>[
+                          OutlineButton(
+                            onPressed: () {},
+                            child: new Text("22",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18)),
+                            shape: CircleBorder(),
+                            padding: const EdgeInsets.all(12),
+                            borderSide: BorderSide(
+                                color: PredefinedColors.LIGHT_NAVY_BLUE),
+                          ),
+                          Padding(padding: const EdgeInsets.only(bottom: 6)),
+                          Text('Badges')
+                        ],
                       ),
                     ],
                   ),
+                  Padding(padding: const EdgeInsets.only(bottom: 10)),
                   Text(
                     "Playing: Call of Duty Modern Warfare 3",
                     textAlign: TextAlign.end,
@@ -93,6 +106,10 @@ class ProfileMain extends StatelessWidget {
                     "Frankfuit, Germany",
                     style: TextStyle(
                         fontSize: 14.0, color: PredefinedColors.GUNMETAL),
+                  ),
+                  FlatButton(
+                    onPressed: () {},
+                    child: Text('Chat', style: TextStyle(color: Colors.white)),
                   )
                 ],
               )),

@@ -7,34 +7,34 @@ class SteamGuard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 33),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       color: PredefinedColors.DARK,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text('2K44Z',
               style: TextStyle(
-                  fontSize: 54,
+                  fontSize: 44,
                   color: Colors.white,
                   fontWeight: FontWeight.bold)),
-          Padding(
-            padding: const EdgeInsetsDirectional.only(top: 30),
-          ),
-          CircularPercentIndicator(
-            radius: 220.0,
-            lineWidth: 8.0,
-            startAngle: 180,
-            percent: 0.7,
-            center: new Text("0:25",
-                style: TextStyle(color: Colors.white, fontSize: 42)),
-            backgroundColor: PredefinedColors.DARK_GREY_BLUE,
-            progressColor: PredefinedColors.DUSTY_ORANGE,
-            circularStrokeCap: CircularStrokeCap.round,
+          Expanded(
+            child: CircularPercentIndicator(
+              radius: 210.0,
+              lineWidth: 8.0,
+              startAngle: 180,
+              percent: 0.7,
+              center: new Text("0:25",
+                  style: TextStyle(color: Colors.white, fontSize: 42)),
+              backgroundColor: PredefinedColors.DARK_GREY_BLUE,
+              progressColor: PredefinedColors.DUSTY_ORANGE,
+              circularStrokeCap: CircularStrokeCap.round,
+            ),
           ),
           ConstrainedBox(
             constraints: BoxConstraints(minWidth: 120, maxWidth: 230),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(padding: const EdgeInsetsDirectional.only(top: 22)),
                 FlatButton(
