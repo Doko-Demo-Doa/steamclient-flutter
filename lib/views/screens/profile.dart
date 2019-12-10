@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:steamclient/views/widgets/profile/statistic_row.dart';
 import '../widgets/profile/profile_main.dart';
 import '../widgets/profile/comment_section.dart';
 
@@ -8,7 +9,9 @@ class ProfileWidgetState extends State<Profile> {
     return Flex(
       direction: Axis.vertical,
       children: <Widget>[
-        ProfileMain(), CommentSection()
+        ProfileMain(),
+        StatisticRow(),
+        CommentSection()
       ],
     );
   }
