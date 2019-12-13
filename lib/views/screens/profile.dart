@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:steamclient/views/widgets/profile/recently_played_games.dart';
 import 'package:steamclient/views/widgets/profile/statistic_row.dart';
+import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 import '../widgets/profile/profile_main.dart';
-import '../widgets/profile/comment_section.dart';
 
 class ProfileWidgetState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Flex(
-      direction: Axis.vertical,
-      children: <Widget>[
-        ProfileMain(),
-        StatisticRow(),
-        CommentSection()
-      ],
-    );
+    return Container(
+        color: PredefinedColors.DARK,
+        child: SingleChildScrollView(
+          child: Flex(
+            direction: Axis.vertical,
+            children: <Widget>[
+              ProfileMain(),
+              StatisticRow(),
+              RecentlyPlayedGames(),
+              RecentlyPlayedGames()
+            ],
+          ),
+        ));
   }
 }
 
