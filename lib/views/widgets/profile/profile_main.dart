@@ -39,7 +39,7 @@ class ProfileMain extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 22, vertical: 6),
                   constraints: BoxConstraints(maxWidth: 160),
                   child: Text(
-                    'Geo Stella',
+                    'Doko',
                     overflow: TextOverflow.fade,
                     maxLines: 1,
                     textAlign: TextAlign.center,
@@ -51,7 +51,7 @@ class ProfileMain extends StatelessWidget {
           Expanded(
               flex: 2,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   // 2 statistic items:
@@ -118,10 +118,46 @@ class ProfileMain extends StatelessWidget {
                                 color: PredefinedColors.GUNMETAL),
                           ),
                         ),
-                        FlatButton(
-                          onPressed: () {},
-                          child: Text('Chat',
-                              style: TextStyle(color: Colors.white)),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            SizedBox(
+                              height: 24,
+                              width: 60,
+                              child: FlatButton(
+                                color: PredefinedColors.DARK_BLUE_GREY,
+                                padding: const EdgeInsets.all(4),
+                                onPressed: () {},
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                        color: PredefinedColors.METALLIC_BLUE)),
+                                child: Text('Chat',
+                                    style: TextStyle(color: Colors.white)),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                            ),
+                            SizedBox(
+                              height: 24,
+                              width: 60,
+                              child: FlatButton(
+                                color: PredefinedColors.DARK_BLUE_GREY,
+                                padding: const EdgeInsets.all(4),
+                                onPressed: () {},
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                        color: PredefinedColors.METALLIC_BLUE)),
+                                child: Text('More',
+                                    style: TextStyle(color: Colors.white)),
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     ),
