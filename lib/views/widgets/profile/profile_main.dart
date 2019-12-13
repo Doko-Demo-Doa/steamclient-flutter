@@ -68,48 +68,64 @@ class ProfileMain extends StatelessWidget {
                                     color: Colors.white, fontSize: 18)),
                             shape: CircleBorder(),
                             padding: const EdgeInsets.all(12),
-                            borderSide: BorderSide(
-                                color: PredefinedColors.LIGHT_NAVY_BLUE),
+                            borderSide:
+                                BorderSide(color: PredefinedColors.RED_PURPLE),
                           ),
                           Padding(padding: const EdgeInsets.only(bottom: 6)),
-                          Text('Level')
+                          Text('Level', style: TextStyle(color: Colors.white))
                         ],
                       ),
                       Column(
                         children: <Widget>[
                           OutlineButton(
                             onPressed: () {},
-                            child: new Text("22",
+                            child: new Text("24",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18)),
                             shape: CircleBorder(),
                             padding: const EdgeInsets.all(12),
-                            borderSide: BorderSide(
-                                color: PredefinedColors.LIGHT_NAVY_BLUE),
+                            borderSide:
+                                BorderSide(color: PredefinedColors.FAWN),
                           ),
                           Padding(padding: const EdgeInsets.only(bottom: 6)),
-                          Text('Badges')
+                          Text('Badges', style: TextStyle(color: Colors.white))
                         ],
                       ),
                     ],
                   ),
                   Padding(padding: const EdgeInsets.only(bottom: 10)),
-                  Text(
-                    "Playing: Call of Duty Modern Warfare 3",
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-                        fontSize: 16.0, color: PredefinedColors.PEA_GREEN),
+                  Container(
+                    padding: const EdgeInsets.only(right: 12),
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "Playing: Call of Duty Modern Warfare 3",
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: PredefinedColors.PEA_GREEN),
+                        ),
+                        Padding(
+                            padding: const EdgeInsetsDirectional.only(top: 12)),
+                        Container(
+                          width: double.infinity,
+                          child: Text(
+                            "Frankfuit, Germany",
+                            textAlign: TextAlign.end,
+                            style: TextStyle(
+                                fontSize: 14.0,
+                                color: PredefinedColors.GUNMETAL),
+                          ),
+                        ),
+                        FlatButton(
+                          onPressed: () {},
+                          child: Text('Chat',
+                              style: TextStyle(color: Colors.white)),
+                        )
+                      ],
+                    ),
                   ),
-                  Padding(padding: const EdgeInsetsDirectional.only(top: 12)),
-                  Text(
-                    "Frankfuit, Germany",
-                    style: TextStyle(
-                        fontSize: 14.0, color: PredefinedColors.GUNMETAL),
-                  ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Text('Chat', style: TextStyle(color: Colors.white)),
-                  )
                 ],
               )),
         ],
