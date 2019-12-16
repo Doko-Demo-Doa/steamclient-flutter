@@ -73,3 +73,4 @@ build/
 # Other
 docs/
 .env*
+.flutter-plugins-dependencies

@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:steamclient/services/navigation_service.dart';
@@ -12,7 +13,11 @@ Future main() async {
   await DotEnv().load('.env');
 
   setupLocator();
-  runApp(SteamClientApp());
+  runApp(
+     DevicePreview(
+    builder: (context) => SteamClientApp(),
+  ),
+  );
 }
 
 class SteamClientApp extends StatelessWidget {
