@@ -19,7 +19,9 @@ class SteamClientApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [],
+      providers: [
+        Provider(create: (_) => null)
+      ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Steam',

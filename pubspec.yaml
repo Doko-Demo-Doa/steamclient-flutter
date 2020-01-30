@@ -18,6 +18,7 @@ dependencies:
   dio: any
   color: any
   provider: ^3.1.0+1
+  provider_architecture: any
   get_it: ^3.0.3
   flutter_svg: any
   font_awesome_flutter: any
