@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'package:steamclient/common/static_data.dart' as routes;
 import 'package:steamclient/router.dart' as router;
+import 'package:steamclient/vms/auth_vm.dart';
 
 import './locator.dart';
 
@@ -20,19 +21,19 @@ class SteamClientApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider(create: (_) => null)
+        ChangeNotifierProvider(create: (_) => AuthViewModel())
       ],
       child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Steam',
-          theme: ThemeData(primarySwatch: Colors.blueGrey, backgroundColor: Colors.grey[800]),
-          navigatorKey: locator<NavigationService>().navigatorKey,
-          onGenerateRoute: router.generateRoute,
-          onUnknownRoute: (settings) => MaterialPageRoute(
-            builder: (context) => Text('Nothing')
-          ),
-          initialRoute: routes.SteamTablayout,
-        ),
+        debugShowCheckedModeBanner: false,
+        title: 'Steam',
+        theme: ThemeData(
+            primarySwatch: Colors.blueGrey, backgroundColor: Colors.grey[800]),
+        navigatorKey: locator<NavigationService>().navigatorKey,
+        onGenerateRoute: router.generateRoute,
+        onUnknownRoute: (settings) =>
+            MaterialPageRoute(builder: (context) => Text('Nothing')),
+        initialRoute: routes.SteamTablayout,
+      ),
     );
   }
 }

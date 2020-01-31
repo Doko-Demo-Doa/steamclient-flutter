@@ -1,1 +1,1 @@
-enum ViewState { Idle, Busy }
+enum AuthState { Anonymous, Authenticated }

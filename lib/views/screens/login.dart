@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
+import 'package:steamclient/vms/auth_vm.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -76,7 +78,9 @@ class LoginScreen extends StatelessWidget {
                           padding: const EdgeInsetsDirectional.only(top: 62)),
                       FlatButton(
                         color: PredefinedColors.DARK_BLUE_GREY,
-                        onPressed: () {},
+                        onPressed: () {
+                          Provider.of<AuthViewModel>(context, listen: false).login(null, null);
+                        },
                         child: Text(
                           'Login',
                           style: TextStyle(color: Colors.white54),

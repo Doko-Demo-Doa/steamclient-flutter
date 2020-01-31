@@ -2,11 +2,14 @@
 // It should have its own navigator.
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:steamclient/enums/viewstate.dart';
 import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
+import 'package:steamclient/vms/auth_vm.dart';
 
 class _TabLayoutState extends State<SteamTablayout>
     with TickerProviderStateMixin<SteamTablayout> {
@@ -21,7 +24,7 @@ class _TabLayoutState extends State<SteamTablayout>
   @override
   Widget build(BuildContext context) {
     const commonTextStyle = TextStyle(fontSize: 12);
-    // _kTabPages[_currentTabIndex]
+    final authState = Provider.of<AuthViewModel>(context).state;
 
     return Scaffold(
       appBar: AppBar(
@@ -56,6 +59,9 @@ class _TabLayoutState extends State<SteamTablayout>
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           if (index == 4) {
+            if (authState == AuthState.Authenticated) {
+              return print('Authenticated!!');
+            }
             Navigator.pushNamed(context, 'Login');
             return;
           }
