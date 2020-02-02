@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:steamclient/enums/viewstate.dart';
 
 class AuthViewModel with ChangeNotifier {
