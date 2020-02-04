@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:steamclient/enums/viewstate.dart';
 import 'package:steamclient/views/screens/app_page.dart';
+import 'package:steamclient/views/screens/playground.dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
@@ -15,7 +16,7 @@ class _TabLayoutState extends State<SteamTablayout>
     with TickerProviderStateMixin<SteamTablayout> {
   int _currentTabIndex = 0;
   final _kTabPages = <Widget>[
-    SteamGuard(),
+    Playground(), // SteamGuard(),
     Profile(),
     StoreFront(),
     AppPage('2222')

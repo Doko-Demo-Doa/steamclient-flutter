@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:steamclient/common/static_data.dart' as routes;
 import 'package:steamclient/views/screens/login.dart';
+import 'package:steamclient/views/screens/playground.dart';
 import 'package:steamclient/views/tab_layout.dart';
 
 import 'package:steamclient/views/screens/app_page.dart';
@@ -13,6 +14,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case routes.SteamTablayout:
       return MaterialPageRoute(builder: (_) => SteamTablayout());
 
+    case routes.PlaygroundRoute:
+      return MaterialPageRoute(builder: (_) => Playground());
     case routes.LoginRoute:
       return MaterialPageRoute(builder: (_) => LoginScreen());
     case routes.StoreFrontRoute:
