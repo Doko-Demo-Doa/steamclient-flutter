@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:steamclient/utils/svg_helper.dart';
 import 'package:steamclient/views/widgets/painter/custom_painter.dart';
 import 'package:steamclient/views/widgets/painter/drawing_points.dart';
 
@@ -20,8 +21,12 @@ class _PlaygroundState extends State<Playground> {
 
   StrokeCap strokeCap = Platform.isAndroid ? StrokeCap.butt : StrokeCap.round;
 
+  var svgHelper = SVGHelper();
+
   @override
   Widget build(BuildContext context) {
+    svgHelper.buildPath("M36.25,19c4.12-0.62,31.49-4.78,33.25-5c4-0.5,5.5,1.12,5.5,4.75c0,2.76-0.5,49.25-0.5,69.5c0,13-6.25,4-8.75,1.75");
+
     return Scaffold(
       body: GestureDetector(
         onPanUpdate: (details) {
