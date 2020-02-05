@@ -1,6 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:collection/collection.dart';
-import 'package:more/iterable.dart';
 import 'package:steamclient/utils/utils_numeric.dart';
 
 class SVGHelper {
@@ -26,7 +24,7 @@ class SVGHelper {
     return listMatched;
   }
 
-  String buildPath(String inputData) {
+  Path buildPath(String inputData) {
     Path p = Path();
     // print(getCoordinatesGroup(inputData));
     try {
@@ -39,8 +37,6 @@ class SVGHelper {
       var subPathStartX = 0.0;
       var subPathStartY = 0.0;
       var curve = false;
-
-      int a = 0;
 
       matcher.forEach((matchElem) {
         var command = matchElem.group(1);
@@ -133,6 +129,32 @@ class SVGHelper {
             lastY = y;
 
             break;
+          case 's':
+            curve = true;
+            List<double> coordinates = getCoordinatesGroup(coordinateStr);
+            var x2 = coordinates[0];
+            var y2 = coordinates[1];
+
+            var x = coordinates[2];
+            var y = coordinates[3];
+
+            if (command == command.toLowerCase()) {
+              x2 += lastX;
+              x += lastX;
+              y2 += lastY;
+              y += lastY;
+            }
+
+            var x1 = 2 * lastX - lastX1;
+            var y1 = 2 * lastY - lastY1;
+
+            p.cubicTo(x1, y1, x2, y2, x, y);
+            lastX1 = x2;
+            lastY1 = y2;
+            lastX = x;
+            lastY = y;
+
+            break;
           case 'z':
             p.close();
             p.moveTo(subPathStartX, subPathStartY);
@@ -142,12 +164,19 @@ class SVGHelper {
             lastY1 = subPathStartY;
             break;
           default:
+            throw Error();
         }
       });
 
-      return matcher[0].group(2);
+      if (!curve) {
+        lastX1 = lastX;
+        lastY1 = lastY;
+      }
+
+      return p;
     } catch (_) {
       print(_);
+      return null;
     }
   }
 }
