@@ -169,8 +169,10 @@ class OneByOnePainter extends PathPainter {
               // ..color = (segment.relativeIndex == 0 && segment.pathIndex== 0) ? Colors.red : ((segment.relativeIndex == 1) ? Colors.blue : segment.color)
               ..color = segment.color
               ..style = PaintingStyle.stroke
-              ..strokeCap = StrokeCap.square
+              ..strokeCap = StrokeCap.butt
               ..strokeWidth = segment.strokeWidth);
+        paint.strokeCap = StrokeCap.round;
+        paint.strokeWidth = 3;
         canvas.drawPath(segment.path, paint);
       });
 

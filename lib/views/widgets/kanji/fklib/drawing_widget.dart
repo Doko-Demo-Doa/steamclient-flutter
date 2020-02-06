@@ -14,8 +14,8 @@ typedef PaintedPathCallback = void Function(int, Path);
 
 /// A widget that iteratively draws path segment data to a defined canvas (drawing line animation).
 ///
-/// Path data can be either passed directly ([AnimatedDrawing.paths]) or via an Svg file ([AnimatedDrawing.svg]).
-class AnimatedDrawing extends StatefulWidget {
+/// Path data can be either passed directly ([KanjiViewer.paths]) or via an Svg file ([KanjiViewer.svg]).
+class KanjiViewer extends StatefulWidget {
   /// Parses path data from an SVG asset. In order to use assets in your project specify those in `pubspec.yaml`:
   /// ```yaml
   /// assets:
@@ -23,7 +23,7 @@ class AnimatedDrawing extends StatefulWidget {
   /// ```
   /// By default every animation repeats infinitely. For running an animation only once you can use a callback to set `run` to false after the first animation cycle completed (see field `onFinish`).
   /// ```dart
-  /// AnimatedDrawing.svg(
+  /// KanjiViewer.svg(
   ///   "assets/test.svg",
   ///   run: this.run,
   ///   duration: new Duration(seconds: 3),
@@ -32,7 +32,7 @@ class AnimatedDrawing extends StatefulWidget {
   ///   }),
   /// )
   /// ```
-  AnimatedDrawing.svg(
+  KanjiViewer.svg(
     this.assetPath, {
     //Standard
     this.controller,
@@ -57,10 +57,10 @@ class AnimatedDrawing extends StatefulWidget {
     assert(this.assetPath.isNotEmpty);
   }
 
-  /// Creates an instance of [AnimatedDrawing] by directly passing path elements to the constructor (still experimental).
+  /// Creates an instance of [KanjiViewer] by directly passing path elements to the constructor (still experimental).
   ///
   ///   ```dart
-  ///   AnimatedDrawing.paths(
+  ///   KanjiViewer.paths(
   ///       [
   ///       ///Path objects
   ///       ],
@@ -78,9 +78,9 @@ class AnimatedDrawing extends StatefulWidget {
   /// Updating [paths] allows dynamically building animation scenes based on external states. For this widget the internal data structure is rebuild every time the state changes, therefore the animation performance might suffer if the amount of elements in [paths] is very high.
   ///
   /// Optionally, [paints] can be provided which specifies a [Paint] object for each [Path] element in [paths].
-  AnimatedDrawing.paths(
+  KanjiViewer.paths(
     this.paths, {
-    //AnimatedDrawing.paths
+    //KanjiViewer.paths
     this.paints = const <Paint>[],
     //Standard
     this.controller,

@@ -22,14 +22,21 @@ class _PlaygroundState extends State<Playground> {
 
   @override
   Widget build(BuildContext context) {
+    var x = '0' + 09924.toString();
     return Scaffold(
-      body: AnimatedDrawing.svg(
-        "assets/vectors/0552f.svg",
-        run: this.run,
-        duration: new Duration(seconds: 3),
-        onFinish: () => setState(() {
-          this.run = false;
-        }),
+      body: Container(
+        margin: const EdgeInsets.all(24),
+        height: 150,
+        width: 150,
+        child: KanjiViewer.svg(
+          "assets/vectors/" + x + ".svg",
+          run: this.run,
+          lineAnimation: LineAnimation.oneByOne,
+          duration: new Duration(seconds: 3),
+          onFinish: () => setState(() {
+            this.run = false;
+          }),
+        ),
       ),
     );
   }

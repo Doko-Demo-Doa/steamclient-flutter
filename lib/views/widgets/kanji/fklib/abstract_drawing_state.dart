@@ -11,7 +11,7 @@ import 'range.dart';
 import 'path_order.dart';
 
 /// Base class for _AnimatedDrawingState and _AnimatedDrawingWithTickerState
-abstract class AbstractAnimatedDrawingState extends State<AnimatedDrawing> {
+abstract class AbstractAnimatedDrawingState extends State<KanjiViewer> {
   AbstractAnimatedDrawingState() {
     this.onFinishAnimation = onFinishAnimationDefault;
   }
@@ -80,7 +80,7 @@ abstract class AbstractAnimatedDrawingState extends State<AnimatedDrawing> {
   }
 
   @override
-  void didUpdateWidget(AnimatedDrawing oldWidget) {
+  void didUpdateWidget(KanjiViewer oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (this.animationOrder != this.widget.animationOrder) {
       applyPathOrder();

@@ -28,7 +28,7 @@ class AnimatedDrawingWithTickerState extends AbstractAnimatedDrawingState
   bool finished = true;
 
   @override
-  void didUpdateWidget(AnimatedDrawing oldWidget) {
+  void didUpdateWidget(KanjiViewer oldWidget) {
     super.didUpdateWidget(oldWidget);
     controller.duration = widget.duration;
   }
@@ -55,7 +55,6 @@ class AnimatedDrawingWithTickerState extends AbstractAnimatedDrawingState
     return createCustomPaint(context);
   }
 
-//
   Future<void> buildAnimation() async {
     try {
       if ((this.paused ||
