@@ -147,6 +147,13 @@ abstract class AbstractAnimatedDrawingState extends State<KanjiViewer> {
     });
   }
 
+  PathPainter buildUnderlayPainter() {
+    if (pathSegmentsToPaintAsBackground.isEmpty) return null;
+    PathPainterBuilder builder = preparePathPainterBuilder();
+    builder.setPathSegments(this.pathSegmentsToPaintAsBackground);
+    return builder.build();
+  }
+
   PathPainter buildForegroundPainter() {
     if (pathSegmentsToAnimate.isEmpty) return null;
     PathPainterBuilder builder =
@@ -262,8 +269,7 @@ abstract class AbstractAnimatedDrawingState extends State<KanjiViewer> {
   void parsePathData() {
     SvgParser parser = new SvgParser();
     if (svgAssetProvided()) {
-      if(this.widget.assetPath == this.assetPath)
-        return;
+      if (this.widget.assetPath == this.assetPath) return;
 
       parseFromSvgAsset(parser);
     } else if (pathsProvided()) {
@@ -299,7 +305,10 @@ abstract class AbstractAnimatedDrawingState extends State<KanjiViewer> {
 
   bool checkIfDefaultOrderSortingRequired() {
     // always keep paths for allAtOnce animation in original path order so we do not sort for the correct PaintOrder later on (which is pretty expensive for AllAtOncePainter)
-    final bool defaultSortingWhenNoOrderDefined = this.widget.lineAnimation == LineAnimation.allAtOnce && this.animationOrder != PathOrders.original;
-    return defaultSortingWhenNoOrderDefined || this.widget.lineAnimation == null;
+    final bool defaultSortingWhenNoOrderDefined =
+        this.widget.lineAnimation == LineAnimation.allAtOnce &&
+            this.animationOrder != PathOrders.original;
+    return defaultSortingWhenNoOrderDefined ||
+        this.widget.lineAnimation == null;
   }
 }

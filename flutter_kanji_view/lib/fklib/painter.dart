@@ -29,7 +29,6 @@ class PaintedPainter extends PathPainter {
   void paint(Canvas canvas, Size size) {
     canvas = super.paintOrDebug(canvas, size);
     if (canPaint) {
-      //pathSegments for AllAtOncePainter are always in the order of PathOrders.original
       pathSegments.forEach((segment) {
         Paint paint = (this.paints.isNotEmpty)
             ? this.paints[segment.pathIndex]
@@ -37,13 +36,12 @@ class PaintedPainter extends PathPainter {
               ..color = segment.color
               ..style = PaintingStyle.stroke
               ..strokeCap = StrokeCap.square
-              // ..strokeWidth = segment.strokeWidth);
-              ..strokeWidth = 4.0);
+              ..strokeWidth = segment.strokeWidth);
+        paint.strokeWidth = 3;
+        paint.color = Colors.black;
+        paint.strokeCap = StrokeCap.round;
         canvas.drawPath(segment.path, paint);
       });
-
-      //No callback etc. needed
-      // super.onFinish(canvas, size);
     }
   }
 }
@@ -79,6 +77,7 @@ class AllAtOncePainter extends PathPainter {
               ..style = PaintingStyle.stroke
               ..strokeCap = StrokeCap.square
               ..strokeWidth = segment.strokeWidth);
+        paint.strokeWidth = 3;
         canvas.drawPath(subPath, paint);
       });
 
@@ -355,6 +354,7 @@ abstract class PathPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..color = Colors.green
         ..strokeWidth = 10.50;
+
       canvas.drawRect(clipRect1, ppp);
     }
 

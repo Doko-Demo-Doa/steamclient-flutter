@@ -48,6 +48,7 @@ class KanjiViewer extends StatefulWidget {
     this.height,
     this.range,
     this.lineAnimation = LineAnimation.oneByOne,
+    this.underlayStrokes,
     this.scaleToViewport = true,
     this.debug,
   })  : this.paths = [],
@@ -96,6 +97,7 @@ class KanjiViewer extends StatefulWidget {
     this.height,
     this.range,
     this.lineAnimation = LineAnimation.oneByOne,
+    this.underlayStrokes,
     this.scaleToViewport = true,
     this.debug,
   }) : this.assetPath = ''
@@ -173,6 +175,10 @@ class KanjiViewer extends StatefulWidget {
   ///
   /// See [LineAnimation.allAtOnce] and [LineAnimation.oneByOne]
   final LineAnimation lineAnimation;
+
+  /// Specifies if a semi-transparent skeleton of the character should be displayed under the drawing character
+  /// Should be gray, for now.
+  final underlayStrokes;
 
   /// Denotes if the path elements should be scaled in order to fit into viewport.
   ///
