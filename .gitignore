@@ -75,3 +75,4 @@ docs/
 .env*
 .flutter-plugins-dependencies
 ios/Flutter/flutter_export_environment.sh
+assets/*
