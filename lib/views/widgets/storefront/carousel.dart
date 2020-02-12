@@ -20,7 +20,29 @@ class Carousel extends StatelessWidget {
         itemBuilder: (context, index) {
           return ConstrainedBox(
             constraints: BoxConstraints.expand(),
-            child: Image(image: NetworkImage(imageLinks[index > 2 ? 0 : index]), fit: BoxFit.cover),
+            child: Stack(
+              children: <Widget>[
+                Image(
+                    width: MediaQuery.of(context).size.width,
+                    image: NetworkImage(imageLinks[index > 2 ? 0 : index]),
+                    fit: BoxFit.contain),
+                Positioned(
+                    bottom: 20,
+                    child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(2)),
+                            gradient: LinearGradient(
+                              begin: FractionalOffset.topCenter,
+                              end: FractionalOffset.bottomCenter,
+                              colors: [
+                                Colors.grey.withOpacity(0.0),
+                                Colors.black87,
+                              ],
+                            ))))
+              ],
+            ),
           );
         },
       ),

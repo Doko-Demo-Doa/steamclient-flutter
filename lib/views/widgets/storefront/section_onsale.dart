@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/models/product.dart';
+import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 
 class SectionOnsale extends StatelessWidget {
+  final headline;
+
+  SectionOnsale(this.headline);
+
   final data = [new Map<String, String>()];
 
   List<Product> generateData() {
@@ -37,7 +42,43 @@ class SectionOnsale extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: <Widget>[
-                Image.network(e.spotlightImage, width: 200, height: 240, fit: BoxFit.cover,)
+                Image.network(
+                  e.spotlightImage,
+                  width: 160,
+                  height: 200,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                    bottom: 0,
+                    left: 0,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 6),
+                          color: PredefinedColors.PEA_GREEN,
+                          child: Text('-20%'),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 3),
+                          color: PredefinedColors.DARK_GREY_BLUE,
+                          child: Column(
+                            children: <Widget>[
+                              Text('300.000₫',
+                                  style: TextStyle(
+                                      color: PredefinedColors.POWDER_BLUE,
+                                      fontSize: 8,
+                                      decoration: TextDecoration.lineThrough)),
+                              Text('154.000₫',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                      color: PredefinedColors.POWDER_BLUE))
+                            ],
+                          ),
+                        )
+                      ],
+                    ))
               ],
             )
           ],
@@ -52,7 +93,7 @@ class SectionOnsale extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(padding: const EdgeInsets.all(12)),
-          Text('Special Offers',
+          Text(headline,
               textAlign: TextAlign.start,
               style: TextStyle(
                   color: Colors.white,
@@ -65,8 +106,7 @@ class SectionOnsale extends StatelessWidget {
               children: spotlistLight,
             ),
           ),
-          Padding(padding: const EdgeInsets.all(6)),
-          Text('Hehe')
+          Padding(padding: const EdgeInsets.all(6))
         ],
       ),
     );
