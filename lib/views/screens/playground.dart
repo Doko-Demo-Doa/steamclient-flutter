@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Playground extends StatefulWidget {
   @override
@@ -20,6 +21,11 @@ class _PlaygroundState extends State<Playground>
         AnimationController(vsync: this, duration: Duration(seconds: 3));
   }
 
+  static final CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(37.42796133580664, -122.085749655962),
+    zoom: 14.4746,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +34,12 @@ class _PlaygroundState extends State<Playground>
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-              width: 400,
-              height: 400,
-              alignment: Alignment.center,
-              padding: const EdgeInsets.all(6),
-              color: Colors.black12),
+            width: 400,
+            height: 400,
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(6),
+            color: Colors.black12
+          ),
           RaisedButton(
               child: Text('Redraw'),
               onPressed: () {

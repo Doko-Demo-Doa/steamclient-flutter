@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:steamclient/views/widgets/profile/online_friends.dart';
 import 'package:steamclient/views/widgets/profile/recently_played_games.dart';
 import 'package:steamclient/views/widgets/profile/statistic_row.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
@@ -15,7 +16,7 @@ class ProfileWidgetState extends State<Profile> {
             children: <Widget>[
               ProfileMain(),
               StatisticRow(),
-              RecentlyPlayedGames(),
+              OnlineFriends(),
               RecentlyPlayedGames(),
               RecentlyPlayedGames(),
               RecentlyPlayedGames()

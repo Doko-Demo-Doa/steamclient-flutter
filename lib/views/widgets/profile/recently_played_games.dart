@@ -8,7 +8,7 @@ class RecentlyPlayedGames extends StatelessWidget {
     'Nier Automata',
     'GENSOU Skydrift'
   ];
-  List imgGameList = [
+  final List imgGameList = [
     'https://steamcdn-a.akamaihd.net/steam/apps/10180/capsule_616x353.jpg?t=1346116649',
     'https://steamcdn-a.akamaihd.net/steam/apps/412020/capsule_616x353.jpg?t=1528703002',
     'https://steamcdn-a.akamaihd.net/steam/apps/1174180/capsule_616x353.jpg?t=1574881682',
