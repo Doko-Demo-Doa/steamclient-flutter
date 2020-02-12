@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:steamclient/desktop/views/widgets/top/menu_bar.dart';
 
-Future main() async {
-  await DotEnv().load('.env');
-
-  runApp(SteamClientApp());
-}
-
-class SteamClientApp extends StatelessWidget {
+class DesktopApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Container(
-          color: Colors.red,
+          color: Colors.green,
+          width: 1024,
+          height: 768,
+          child: Column(
+            children: <Widget>[
+              MenuBar()
+            ],
+          ),
         ),
         title: 'Steam',
         theme: ThemeData(

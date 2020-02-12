@@ -8,7 +8,7 @@
 PRODUCT_NAME = steamclient
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.acaziasoft.steamclient
+PRODUCT_BUNDLE_IDENTIFIER = com.example.steamclient
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2020 com.acaziasoft. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2020 com.example. All rights reserved.

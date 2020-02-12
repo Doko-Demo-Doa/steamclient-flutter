@@ -8,6 +8,6 @@ class NavigationService {
   }
 
   void goBack() {
-    return navigatorKey.currentState.pop();
+    navigatorKey.currentState.pop();
   }
 }
