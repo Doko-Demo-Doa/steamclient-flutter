@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RecentlyPlayedGames extends StatelessWidget {
+  final headline;
+
   final gameList = [
     'Call of Duty: Modern Warfare 2',
     'Metro Exodus',
@@ -17,6 +19,8 @@ class RecentlyPlayedGames extends StatelessWidget {
   ];
 
   final imageWidth = 150.0;
+
+  RecentlyPlayedGames({this.headline});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +57,7 @@ class RecentlyPlayedGames extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(padding: const EdgeInsets.all(12)),
-          Text('Recently Played',
+          Text(headline,
               textAlign: TextAlign.start,
               style: TextStyle(
                   color: Colors.white,

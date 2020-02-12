@@ -17,9 +17,9 @@ class ProfileWidgetState extends State<Profile> {
               ProfileMain(),
               StatisticRow(),
               OnlineFriends(),
-              RecentlyPlayedGames(),
-              RecentlyPlayedGames(),
-              RecentlyPlayedGames()
+              RecentlyPlayedGames(headline: 'Recently Played'),
+              RecentlyPlayedGames(headline: 'Trending Games'),
+              RecentlyPlayedGames(headline: 'Backlog Awaits')
             ],
           ),
         ));

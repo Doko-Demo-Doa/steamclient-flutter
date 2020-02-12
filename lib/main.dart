@@ -35,7 +35,7 @@ class SteamClientApp extends StatelessWidget {
         onGenerateRoute: router.generateRoute,
         onUnknownRoute: (settings) =>
             MaterialPageRoute(builder: (context) => Text('Nothing')),
-        initialRoute: routes.PlaygroundRoute,
+        initialRoute: routes.SteamTablayout,
       ),
     );
   }
