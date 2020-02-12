@@ -40,46 +40,52 @@ class SectionOnsale extends StatelessWidget {
         padding: const EdgeInsets.only(right: 12),
         child: Column(
           children: <Widget>[
-            Stack(
-              children: <Widget>[
-                Image.network(
-                  e.spotlightImage,
-                  width: 160,
-                  height: 200,
-                  fit: BoxFit.cover,
-                ),
-                Positioned(
-                    bottom: 0,
-                    left: 0,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 6),
-                          color: PredefinedColors.PEA_GREEN,
-                          child: Text('-20%'),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 3),
-                          color: PredefinedColors.DARK_GREY_BLUE,
-                          child: Column(
-                            children: <Widget>[
-                              Text('300.000₫',
-                                  style: TextStyle(
-                                      color: PredefinedColors.POWDER_BLUE,
-                                      fontSize: 8,
-                                      decoration: TextDecoration.lineThrough)),
-                              Text('154.000₫',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                      color: PredefinedColors.POWDER_BLUE))
-                            ],
+            InkWell(
+              onTap: () {
+                 Navigator.pushNamed(context, 'AppPage');
+              },
+              child: Stack(
+                children: <Widget>[
+                  Image.network(
+                    e.spotlightImage,
+                    width: 160,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  Positioned(
+                      bottom: 0,
+                      left: 0,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 6),
+                            color: PredefinedColors.PEA_GREEN,
+                            child: Text('-20%'),
                           ),
-                        )
-                      ],
-                    ))
-              ],
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 3),
+                            color: PredefinedColors.DARK_GREY_BLUE,
+                            child: Column(
+                              children: <Widget>[
+                                Text('300.000₫',
+                                    style: TextStyle(
+                                        color: PredefinedColors.POWDER_BLUE,
+                                        fontSize: 8,
+                                        decoration:
+                                            TextDecoration.lineThrough)),
+                                Text('154.000₫',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        color: PredefinedColors.POWDER_BLUE))
+                              ],
+                            ),
+                          )
+                        ],
+                      ))
+                ],
+              ),
             )
           ],
         ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:steamclient/views/widgets/storefront/browse_by.dart';
 import 'package:steamclient/views/widgets/storefront/carousel.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
@@ -12,6 +11,7 @@ class StoreFront extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(color: PredefinedColors.DARK),
       child: SingleChildScrollView(
+        primary: true,
         child: Column(
           children: <Widget>[
             SectionHeader('Test'),
