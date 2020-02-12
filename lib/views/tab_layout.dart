@@ -13,7 +13,7 @@ import 'package:steamclient/vms/auth_vm.dart';
 
 class _TabLayoutState extends State<SteamTablayout>
     with TickerProviderStateMixin<SteamTablayout> {
-  int _currentTabIndex = 0;
+  int _currentTabIndex = 2;
   final _kTabPages = <Widget>[
     SteamGuard(),
     Profile(),

@@ -7,9 +7,12 @@ class SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+      padding: const EdgeInsets.fromLTRB(10, 12, 20, 12),
       alignment: Alignment.centerLeft,
-      child: Text('FEATURED & RECOMMENDED', style: TextStyle(color: Colors.white)),
+      child: Text('Featured & Recommended',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold)),
     );
   }
 }
