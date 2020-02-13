@@ -93,7 +93,9 @@ class ChatThreads extends StatelessWidget {
                               Text(
                                 item.playing != '' ? item.playing : 'Online',
                                 style: TextStyle(
-                                    color: item.playing != '' ? PredefinedColors.ELECTRIC_LIME : PredefinedColors.LIGHT_BLUE),
+                                    color: item.playing != ''
+                                        ? PredefinedColors.ELECTRIC_LIME
+                                        : PredefinedColors.LIGHT_BLUE),
                               )
                             ],
                           )),
