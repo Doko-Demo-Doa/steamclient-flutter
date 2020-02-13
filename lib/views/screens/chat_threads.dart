@@ -49,7 +49,7 @@ class ChatThreads extends StatelessWidget {
               color: Colors.transparent,
               child: InkWell(
                 onTap: () {
-                  print("tapped");
+                  Navigator.pushNamed(context, 'Chat');
                 },
                 splashColor: PredefinedColors.DARK_BLUE,
                 child: Container(
