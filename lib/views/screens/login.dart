@@ -40,14 +40,15 @@ class LoginScreen extends StatelessWidget {
               children: <Widget>[
                 TextField(
                   style: TextStyle(color: Colors.white60),
+                  enabled: false,
                   decoration: InputDecoration(
                       counterText: '',
-                      enabledBorder: UnderlineInputBorder(
+                      disabledBorder: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: PredefinedColors.GUNMETAL)),
+                              BorderSide(color: PredefinedColors.POWDER_BLUE)),
                       border: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: PredefinedColors.GUNMETAL)),
+                          borderSide: BorderSide(
+                              color: PredefinedColors.POWDER_BLUE, width: 1)),
                       hintText: 'Username',
                       hintStyle: TextStyle(color: PredefinedColors.GUNMETAL)),
                   maxLength: 32,
@@ -56,14 +57,18 @@ class LoginScreen extends StatelessWidget {
                 TextField(
                   obscureText: true,
                   style: TextStyle(color: Colors.white60),
+                  enabled: false,
                   decoration: InputDecoration(
                       counterText: '',
+                      disabledBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: PredefinedColors.POWDER_BLUE)),
                       enabledBorder: UnderlineInputBorder(
                           borderSide:
                               BorderSide(color: PredefinedColors.GUNMETAL)),
                       border: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: PredefinedColors.GUNMETAL)),
+                              BorderSide(color: PredefinedColors.POWDER_BLUE)),
                       hintText: 'Password',
                       hintStyle: TextStyle(color: PredefinedColors.GUNMETAL)),
                   maxLength: 32,
@@ -79,7 +84,8 @@ class LoginScreen extends StatelessWidget {
                       FlatButton(
                         color: PredefinedColors.DARK_BLUE_GREY,
                         onPressed: () {
-                          Provider.of<AuthViewModel>(context, listen: false).login(null, null);
+                          Provider.of<AuthViewModel>(context, listen: false)
+                              .login(null, null);
                         },
                         child: Text(
                           'Login',
