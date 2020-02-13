@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:steamclient/common/static_data.dart' as routes;
+import 'package:steamclient/views/screens/chat_threads..dart';
 import 'package:steamclient/views/screens/login.dart';
 import 'package:steamclient/views/screens/playground.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
@@ -23,6 +24,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => LoginScreen());
     case routes.StoreFrontRoute:
       return MaterialPageRoute(builder: (_) => StoreFront());
+    case routes.ChatThreadsRoute:
+      return MaterialPageRoute(builder: (_) => ChatThreads());
     case routes.ProfileRoute:
       return MaterialPageRoute(builder: (_) => Profile());
     case routes.AppPageRoute:

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:steamclient/enums/viewstate.dart';
-import 'package:steamclient/views/screens/app_page.dart';
+import 'package:steamclient/views/screens/chat_threads..dart';
 import 'package:steamclient/views/screens/profile.dart';
 import 'package:steamclient/views/screens/storefront.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
@@ -18,7 +18,7 @@ class _TabLayoutState extends State<SteamTablayout>
     SteamGuard(),
     Profile(),
     StoreFront(),
-    AppPage('2222')
+    ChatThreads()
   ];
 
   @override

@@ -1,6 +1,7 @@
 // Page for single app, just like /app/ route on website.
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:steamclient/common/predefined_colors.dart' as PredefinedColors;
 
 class AppPage extends StatelessWidget {
@@ -58,7 +59,8 @@ class AppPage extends StatelessWidget {
           ];
         },
         body: SingleChildScrollView(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 18),
+          physics: ClampingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -67,6 +69,76 @@ class AppPage extends StatelessWidget {
               // Pricing
               Flex(
                 direction: Axis.horizontal,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 8),
+                            color: PredefinedColors.PEA_GREEN,
+                            child: Text('-50%'),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 6),
+                            color: PredefinedColors.DARK_GREY_BLUE,
+                            child: Column(
+                              children: <Widget>[
+                                Text('300.000₫',
+                                    style: TextStyle(
+                                        color: PredefinedColors.POWDER_BLUE,
+                                        fontSize: 8,
+                                        decoration:
+                                            TextDecoration.lineThrough)),
+                                Text('150.000₫',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        color: PredefinedColors.POWDER_BLUE))
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Padding(padding: const EdgeInsets.all(9)),
+                      RaisedButton(
+                        onPressed: () {
+                          print('Pressed');
+                        },
+                        color: PredefinedColors.DIRTY_GREEN,
+                        child: Text('Add To Cart',
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      // Platforms.
+                      Padding(padding: const EdgeInsets.all(2)),
+                      Row(
+                        children: <Widget>[
+                          Icon(
+                            FontAwesomeIcons.windows,
+                            color: Colors.white,
+                            size: 14,
+                          ),
+                          Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2)),
+                          Icon(FontAwesomeIcons.apple,
+                              color: Colors.white, size: 14),
+                          Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2)),
+                          Icon(FontAwesomeIcons.linux,
+                              color: Colors.white, size: 14)
+                        ],
+                      )
+                    ],
+                  ),
+                ],
               ),
               // Metadata
               Flex(
