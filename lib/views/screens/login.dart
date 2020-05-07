@@ -40,7 +40,8 @@ class LoginScreen extends StatelessWidget {
               children: <Widget>[
                 TextField(
                   style: TextStyle(color: Colors.white60),
-                  enabled: false,
+                  textInputAction: TextInputAction.done,
+                  keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       counterText: '',
                       disabledBorder: UnderlineInputBorder(
