@@ -49,3 +49,7 @@ pubspec.lock
 # ENVs
 .env.*
 .env
+
+# Generated
+*.xcconfig
+Podfile
