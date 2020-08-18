@@ -1,0 +1,1 @@
+enum AuthState { Anonymous, Authenticated }
