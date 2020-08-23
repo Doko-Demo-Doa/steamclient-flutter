@@ -53,3 +53,4 @@ pubspec.lock
 # Generated
 *.xcconfig
 Podfile
+.vscode/

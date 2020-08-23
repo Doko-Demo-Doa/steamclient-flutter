@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:steamclient/common/predefined_colors.dart';
+import 'package:steamclient/views/layouts/base_scaffold.dart';
 
 class AppPage extends StatelessWidget {
   final String appId;
@@ -18,7 +19,7 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BaseScaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.ALMOST_BLACK,
       body: NestedScrollView(
