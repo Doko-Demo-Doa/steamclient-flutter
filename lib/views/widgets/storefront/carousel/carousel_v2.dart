@@ -1,0 +1,60 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:steamclient/common/predefined_colors.dart';
+import 'package:steamclient/views/widgets/storefront/carousel/custom_scroll_physics.dart';
+
+class Carousel extends StatelessWidget {
+  final imageLinks = [
+    'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg?t=1588941389',
+    'https://steamcdn-a.akamaihd.net/steam/apps/1121560/capsule_616x353.jpg?t=1572307828',
+    'https://steamcdn-a.akamaihd.net/steam/apps/912450/capsule_616x353.jpg?t=1570669161'
+  ];
+
+  final controller = PageController(initialPage: 1, viewportFraction: 0.8);
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = 320;
+
+    return Container(
+      width: width,
+      height: height,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 22),
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image(
+                    width: width * 0.8,
+                    height: height * 0.55,
+                    image: NetworkImage(imageLinks[index > 2 ? 0 : index]),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12, bottom: 4),
+                  child: Text(
+                    "Cyberpunk 2077",
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ),
+                Text(
+                  "Pre-purchase Now",
+                  style: TextStyle(color: AppColors.SLATE_GREY),
+                ),
+              ],
+            ),
+          );
+        },
+        scrollDirection: Axis.horizontal,
+        itemCount: imageLinks.length,
+      ),
+    );
+  }
+}

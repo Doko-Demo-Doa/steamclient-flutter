@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/views/widgets/storefront/browse_by.dart';
-import 'package:steamclient/views/widgets/storefront/carousel.dart';
+import 'package:steamclient/views/widgets/storefront/carousel/carousel_v2.dart';
 import 'package:steamclient/common/predefined_colors.dart';
-import 'package:steamclient/views/widgets/storefront/section_header.dart';
 import 'package:steamclient/views/widgets/storefront/section_onsale.dart';
 
 class StoreFrontV2 extends StatelessWidget {
@@ -14,7 +13,6 @@ class StoreFrontV2 extends StatelessWidget {
         primary: true,
         child: Column(
           children: <Widget>[
-            SectionHeader('Test'),
             Carousel(),
             SectionOnsale('Special Offers'),
             BrowseBy(),

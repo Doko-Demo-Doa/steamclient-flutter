@@ -10,7 +10,7 @@ import 'package:steamclient/views/tab_layout.dart';
 
 import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
-import 'package:steamclient/views/screens/storefront.dart';
+import 'package:steamclient/views/screens/storefront_v2.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -24,7 +24,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case routes.LoginRoute:
       return MaterialPageRoute(builder: (_) => LoginScreen());
     case routes.StoreFrontRoute:
-      return MaterialPageRoute(builder: (_) => StoreFront());
+      return MaterialPageRoute(builder: (_) => StoreFrontV2());
     case routes.ChatThreadsRoute:
       return MaterialPageRoute(builder: (_) => ChatThreads());
     case routes.ChatRoute:
