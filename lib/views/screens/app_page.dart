@@ -44,7 +44,7 @@ class AppPage extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(2)),
+                            borderRadius: BorderRadius.all(Radius.circular(3)),
                             gradient: LinearGradient(
                               begin: FractionalOffset.bottomCenter,
                               end: FractionalOffset.topCenter,
