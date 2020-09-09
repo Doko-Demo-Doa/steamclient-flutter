@@ -13,3 +13,4 @@ TODO:
 - Integrating real Steam's public API into the app, including Featured, deals, searching.
 - Complete User Preferences screen.
 - Countdown animation for Steam Guard.
+- Apply new design.
