@@ -98,7 +98,7 @@ class SectionOnsale extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(padding: const EdgeInsets.all(12)),
+          Padding(padding: const EdgeInsets.all(0)),
           Text(headline,
               textAlign: TextAlign.start,
               style: TextStyle(
