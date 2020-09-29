@@ -19,7 +19,7 @@ class ChatThreads extends StatelessWidget {
     var u3 = new User();
     u3.avatar =
         'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/d9/d9f3ca9ba12a2d140fb00a4c25fe01acc5fe0402_full.jpg';
-    u3.username = '夢';
+    u3.username = '夢夢';
     u3.playing = 'Half-life 2';
 
     var u4 = new User();
