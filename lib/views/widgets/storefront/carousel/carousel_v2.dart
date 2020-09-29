@@ -15,16 +15,15 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = 320;
 
     return Container(
       width: width,
-      height: height,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 22),
+      height: 270,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListView.builder(
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsets.only(right: 12, top: 22),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -32,7 +31,7 @@ class Carousel extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Image(
                     width: width * 0.8,
-                    height: height * 0.55,
+                    height: 170,
                     image: NetworkImage(imageLinks[index > 2 ? 0 : index]),
                     fit: BoxFit.cover,
                   ),
