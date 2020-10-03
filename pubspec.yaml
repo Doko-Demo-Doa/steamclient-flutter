@@ -16,6 +16,7 @@ dependencies:
   palette_generator: ^0.2.3
   country_icons: any
   cupertino_icons: ^0.1.3
+  fluentui_system_icons: any
   cupertino_stackview: any
   dio: any
   drawing_animation: any

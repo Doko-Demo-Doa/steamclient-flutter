@@ -3,7 +3,7 @@ import 'package:steamclient/models/product.dart';
 import 'package:steamclient/common/predefined_colors.dart';
 
 class SectionOnsale extends StatelessWidget {
-  final headline;
+  final String headline;
 
   SectionOnsale(this.headline);
 
@@ -46,11 +46,14 @@ class SectionOnsale extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                e.spotlightImage,
-                width: 160,
-                height: 220,
-                fit: BoxFit.cover,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.network(
+                  e.spotlightImage,
+                  width: 160,
+                  height: 220,
+                  fit: BoxFit.cover,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 4),
@@ -97,14 +100,6 @@ class SectionOnsale extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(padding: const EdgeInsets.all(0)),
-          Text(headline,
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold)),
-          Padding(padding: const EdgeInsets.all(6)),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
