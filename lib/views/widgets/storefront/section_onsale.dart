@@ -106,7 +106,7 @@ class SectionOnsale extends StatelessWidget {
               children: spotlistLight,
             ),
           ),
-          Padding(padding: const EdgeInsets.all(6))
+          Padding(padding: const EdgeInsets.all(7))
         ],
       ),
     );
