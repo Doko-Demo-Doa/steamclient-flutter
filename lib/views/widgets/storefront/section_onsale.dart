@@ -29,6 +29,7 @@ class SectionOnsale extends StatelessWidget {
     resp.add(sp2);
     resp.add(sp1);
     resp.add(sp2);
+    resp.add(sp2);
 
     return resp;
   }
