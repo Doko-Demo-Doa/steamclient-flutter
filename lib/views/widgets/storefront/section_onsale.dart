@@ -29,6 +29,7 @@ class SectionOnsale extends StatelessWidget {
     resp.add(sp2);
     resp.add(sp1);
     resp.add(sp2);
+    resp.add(sp2);
 
     return resp;
   }
@@ -106,7 +107,7 @@ class SectionOnsale extends StatelessWidget {
               children: spotlistLight,
             ),
           ),
-          Padding(padding: const EdgeInsets.all(6))
+          Padding(padding: const EdgeInsets.all(7))
         ],
       ),
     );
