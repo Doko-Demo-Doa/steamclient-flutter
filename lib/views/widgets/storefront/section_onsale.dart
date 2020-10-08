@@ -38,8 +38,8 @@ class SectionOnsale extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> spotlistLight = generateData().map((e) {
       return Container(
-        margin: const EdgeInsets.only(right: 10),
-        width: 178,
+        margin: const EdgeInsets.only(left: 22),
+        width: 160,
         child: InkWell(
           onTap: () {
             Navigator.pushNamed(context, 'AppPage');
@@ -96,7 +96,6 @@ class SectionOnsale extends StatelessWidget {
     }).toList();
 
     return Container(
-      padding: const EdgeInsets.only(left: 16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,7 +106,7 @@ class SectionOnsale extends StatelessWidget {
               children: spotlistLight,
             ),
           ),
-          Padding(padding: const EdgeInsets.all(7))
+          Padding(padding: const EdgeInsets.symmetric(vertical: 7))
         ],
       ),
     );
