@@ -54,3 +54,5 @@ pubspec.lock
 *.xcconfig
 Podfile
 .vscode/
+Podfile.lock
+*.xcworkspacedata

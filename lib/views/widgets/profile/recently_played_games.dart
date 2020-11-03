@@ -39,7 +39,7 @@ class RecentlyPlayedGames extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: FractionalOffset.topCenter,
                     end: FractionalOffset.bottomCenter,
-                    List: [
+                    colors: [
                       Colors.grey.withOpacity(0.0),
                       Colors.black87,
                     ],

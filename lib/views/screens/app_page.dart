@@ -48,7 +48,7 @@ class AppPage extends StatelessWidget {
                         gradient: LinearGradient(
                           begin: FractionalOffset.bottomCenter,
                           end: FractionalOffset.topCenter,
-                          List: [
+                          colors: [
                             Colors.grey.withOpacity(0.0),
                             Colors.black38,
                           ],

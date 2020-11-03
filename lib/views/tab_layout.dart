@@ -37,7 +37,7 @@ class _TabLayoutState extends State<SteamTablayout>
                 gradient: LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  List: [
+                  colors: [
                     AppColors.ALMOST_BLACK,
                     Colors.white,
                     AppColors.ALMOST_BLACK
