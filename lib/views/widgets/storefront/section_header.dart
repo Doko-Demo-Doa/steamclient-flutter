@@ -1,5 +1,6 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:steamclient/common/predefined_colors.dart';
 
 class SectionHeader extends StatelessWidget {
   final text;
@@ -8,12 +9,13 @@ class SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(10, 12, 20, 12),
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
       alignment: Alignment.centerLeft,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Featured & Recommended',
+            this.text,
             textAlign: TextAlign.start,
             style: TextStyle(
               color: Colors.white,
@@ -22,7 +24,10 @@ class SectionHeader extends StatelessWidget {
             ),
           ),
           IconButton(
-            icon: Icon(FluentIcons.access_time_24_regular),
+            icon: Icon(
+              FluentIcons.arrow_forward_16_regular,
+              color: AppColors.BLUE,
+            ),
             onPressed: () {
               print("Button pressed");
             },
