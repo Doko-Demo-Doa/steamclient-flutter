@@ -7,8 +7,8 @@ import 'package:steamclient/common/predefined_colors.dart';
 import 'package:steamclient/enums/viewstate.dart';
 import 'package:steamclient/views/screens/chat_threads.dart';
 import 'package:steamclient/views/screens/profile.dart';
-import 'package:steamclient/views/screens/storefront_v2.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
+import 'package:steamclient/views/screens/storefront_v2.dart';
 import 'package:steamclient/vms/auth_vm.dart';
 
 class _TabLayoutState extends State<SteamTablayout>
@@ -23,39 +23,16 @@ class _TabLayoutState extends State<SteamTablayout>
 
   @override
   Widget build(BuildContext context) {
-    const commonTextStyle = TextStyle(fontSize: 12);
     final authState = Provider.of<AuthViewModel>(context).state;
 
     return Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(1.5),
-            child: Container(
-              height: 1.5,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    AppColors.ALMOST_BLACK,
-                    Colors.white,
-                    AppColors.ALMOST_BLACK
-                  ],
-                ),
-              ),
-            ),
-          ),
-          backgroundColor: AppColors.ALMOST_BLACK,
-          title: Image.asset('assets/images/header_logo.png', height: 36),
-          centerTitle: true),
       body: IndexedStack(
         index: _currentTabIndex,
         children: _kTabPages,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
-        backgroundColor: AppColors.ALMOST_BLACK,
+        backgroundColor: AppColors.CHARCOAL_GREY,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white30,
         type: BottomNavigationBarType.fixed,
@@ -74,24 +51,24 @@ class _TabLayoutState extends State<SteamTablayout>
         items: [
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.shieldAlt),
-            title: Text('Guard', style: commonTextStyle),
+            label: 'Guard',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.supervisor_account),
-            title: Text('Profile', style: commonTextStyle),
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            title: Text('Store', style: commonTextStyle),
+            label: 'Store',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            title: Text('Chat', style: commonTextStyle),
+            label: 'Chat',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
-            title: Text('Library', style: commonTextStyle),
-          )
+            label: 'Library',
+          ),
         ],
       ),
     );

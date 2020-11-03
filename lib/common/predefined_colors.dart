@@ -29,4 +29,6 @@ class AppColors {
   static HexColor SLATE = HexColor('#536C7B');
   static HexColor SLATE_GREY = HexColor('#6D6D6D');
   static HexColor VERY_PALE_GREEN = HexColor('#D9F5BA');
+  static HexColor CHARCOAL_GREY = HexColor('#3A3D44');
+  static HexColor IRON = HexColor('#45464A');
 }
