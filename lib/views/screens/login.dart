@@ -11,10 +11,12 @@ class LoginScreen extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 42, horizontal: 50),
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [AppColors.DARK_BLUE, AppColors.ALMOST_BLACK])),
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            List: [AppColors.DARK_BLUE, AppColors.ALMOST_BLACK],
+          ),
+        ),
         child: Column(
           children: <Widget>[
             Container(

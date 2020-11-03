@@ -34,14 +34,16 @@ class _TabLayoutState extends State<SteamTablayout>
             child: Container(
               height: 1.5,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  List: [
                     AppColors.ALMOST_BLACK,
                     Colors.white,
                     AppColors.ALMOST_BLACK
-                  ])),
+                  ],
+                ),
+              ),
             ),
           ),
           backgroundColor: AppColors.ALMOST_BLACK,

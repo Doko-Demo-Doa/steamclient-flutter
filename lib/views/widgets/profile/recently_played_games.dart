@@ -34,17 +34,18 @@ class RecentlyPlayedGames extends StatelessWidget {
                 height: 60,
                 width: imageWidth,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(2)),
-                    gradient: LinearGradient(
-                      begin: FractionalOffset.topCenter,
-                      end: FractionalOffset.bottomCenter,
-                      colors: [
-                        Colors.grey.withOpacity(0.0),
-                        Colors.black87,
-                      ],
-                    )),
-              )
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(2)),
+                  gradient: LinearGradient(
+                    begin: FractionalOffset.topCenter,
+                    end: FractionalOffset.bottomCenter,
+                    List: [
+                      Colors.grey.withOpacity(0.0),
+                      Colors.black87,
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
           padding: const EdgeInsets.only(right: 12));

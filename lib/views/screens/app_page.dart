@@ -31,32 +31,34 @@ class AppPage extends StatelessWidget {
               snap: false,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
-                  centerTitle: true,
-                  collapseMode: CollapseMode.pin,
-                  title: Text('',
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(color: Colors.white, fontSize: 16.0)),
-                  background: Stack(
-                    children: <Widget>[
-                      Image.network(
-                          'https://steamcdn-a.akamaihd.net/steam/apps/524220/capsule_616x353.jpg?t=1551189877',
-                          fit: BoxFit.cover),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(3)),
-                            gradient: LinearGradient(
-                              begin: FractionalOffset.bottomCenter,
-                              end: FractionalOffset.topCenter,
-                              colors: [
-                                Colors.grey.withOpacity(0.0),
-                                Colors.black38,
-                              ],
-                            )),
-                      )
-                    ],
-                  )),
-            )
+                centerTitle: true,
+                collapseMode: CollapseMode.pin,
+                title: Text('',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: Colors.white, fontSize: 16.0)),
+                background: Stack(
+                  children: <Widget>[
+                    Image.network(
+                        'https://steamcdn-a.akamaihd.net/steam/apps/524220/capsule_616x353.jpg?t=1551189877',
+                        fit: BoxFit.cover),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(3)),
+                        gradient: LinearGradient(
+                          begin: FractionalOffset.bottomCenter,
+                          end: FractionalOffset.topCenter,
+                          List: [
+                            Colors.grey.withOpacity(0.0),
+                            Colors.black38,
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ];
         },
         body: SingleChildScrollView(
