@@ -4,6 +4,7 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:steamclient/views/widgets/storefront/carousel/carousel_v2.dart';
 import 'package:steamclient/views/widgets/storefront/section_header.dart';
 import 'package:steamclient/views/widgets/storefront/section_onsale.dart';
+import 'package:steamclient/views/widgets/storefront/scrollable_tab_bar.dart';
 
 class StoreFrontV2 extends StatelessWidget {
   @override
@@ -18,8 +19,8 @@ class StoreFrontV2 extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(1.5),
           child: Container(
-            height: 2,
             color: AppColors.IRON,
+            child: ScrollableTabBar(),
           ),
         ),
         actions: [

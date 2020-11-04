@@ -12,11 +12,11 @@ class SteamGuard extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Text('2K44Z',
-              style: TextStyle(
-                  fontSize: 44,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
+          Text(
+            '2K44Z',
+            style: TextStyle(
+                fontSize: 44, color: Colors.white, fontWeight: FontWeight.bold),
+          ),
           Expanded(
             child: CircularPercentIndicator(
               radius: 210.0,
