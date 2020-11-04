@@ -17,39 +17,36 @@ class StoreFrontV2 extends StatelessWidget {
           style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
         ),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(1.5),
+          preferredSize: Size.fromHeight(44.5),
           child: Container(
             color: AppColors.IRON,
             child: ScrollableTabBar(),
           ),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: GestureDetector(
-              child: Icon(
-                FluentIcons.apps_28_regular,
-                color: AppColors.SECONDARY_TEXT,
-              ),
+          IconButton(
+            tooltip: 'Store',
+            icon: Icon(
+              FluentIcons.apps_28_regular,
+              color: AppColors.SECONDARY_TEXT,
             ),
+            onPressed: () {},
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: GestureDetector(
-              child: Icon(
-                FluentIcons.search_28_filled,
-                color: AppColors.SECONDARY_TEXT,
-              ),
+          IconButton(
+            tooltip: 'Search',
+            icon: Icon(
+              FluentIcons.search_28_filled,
+              color: AppColors.SECONDARY_TEXT,
             ),
+            onPressed: () {},
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: GestureDetector(
-              child: Icon(
-                FluentIcons.cart_24_regular,
-                color: AppColors.SECONDARY_TEXT,
-              ),
+          IconButton(
+            tooltip: 'Cart',
+            icon: Icon(
+              FluentIcons.cart_24_regular,
+              color: AppColors.SECONDARY_TEXT,
             ),
+            onPressed: () {},
           ),
         ],
         backgroundColor: AppColors.CHARCOAL_GREY,

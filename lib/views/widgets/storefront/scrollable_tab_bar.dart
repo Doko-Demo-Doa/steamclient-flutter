@@ -2,7 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:steamclient/common/predefined_colors.dart';
 
-const tabLabels = ['For You', 'Trending', 'Categories', 'Recommendations'];
+const tabLabels = [
+  'For You',
+  'Trending',
+  'Categories',
+  'Recommendations',
+  'News',
+  'Steam Labs'
+];
 
 class ScrollableTabBar extends StatelessWidget {
   @override
@@ -14,7 +21,7 @@ class ScrollableTabBar extends StatelessWidget {
             .map(
               (e) => Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                    const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
                 child: Text(
                   e,
                   style: TextStyle(color: AppColors.LIGHT_GREY_BLUE),

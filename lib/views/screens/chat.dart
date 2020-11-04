@@ -61,29 +61,29 @@ class Chat extends StatelessWidget {
         Padding(padding: const EdgeInsets.only(right: 12)),
         ConstrainedBox(
           child: DecoratedBox(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                child: Text(
-                  content,
-                  textAlign: TextAlign.start,
-                  style: TextStyle(color: AppColors.POWDER_BLUE),
-                ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              child: Text(
+                content,
+                textAlign: TextAlign.start,
+                style: TextStyle(color: AppColors.POWDER_BLUE),
               ),
-              decoration: BoxDecoration(
-                  color: AppColors.DARK_BLUE_GREY,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(6),
-                      topRight: Radius.circular(6),
-                      bottomRight: Radius.circular(6)),
-                  border:
-                      Border.all(color: AppColors.DARK_BLUE_GREY, width: 2))),
+            ),
+            decoration: BoxDecoration(
+              color: AppColors.DARK_BLUE_GREY,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(6),
+                  topRight: Radius.circular(6),
+                  bottomRight: Radius.circular(6)),
+              border: Border.all(color: AppColors.DARK_BLUE_GREY, width: 2),
+            ),
+          ),
           constraints: BoxConstraints(
             minHeight: 5.0,
             minWidth: 5.0,
             maxWidth: maxWidth,
           ),
-        )
+        ),
       ],
     );
   }
