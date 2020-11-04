@@ -39,6 +39,7 @@ class SectionOnsale extends StatelessWidget {
     List<Widget> spotlistLight = generateData().map((e) {
       return Container(
         margin: const EdgeInsets.only(left: 22),
+        padding: EdgeInsets.only(top: 17),
         width: 160,
         child: InkWell(
           onTap: () {
@@ -47,13 +48,25 @@ class SectionOnsale extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.network(
-                  e.spotlightImage,
-                  width: 160,
-                  height: 220,
-                  fit: BoxFit.cover,
+              Container(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 4,
+                      blurRadius: 12,
+                      offset: Offset(0, 0), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.network(
+                    e.spotlightImage,
+                    width: 160,
+                    height: 220,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Padding(

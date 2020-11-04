@@ -17,7 +17,7 @@ class StoreFrontV2 extends StatelessWidget {
           style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
         ),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(44.5),
+          preferredSize: Size.fromHeight(46.0),
           child: Container(
             color: AppColors.IRON,
             child: ScrollableTabBar(),

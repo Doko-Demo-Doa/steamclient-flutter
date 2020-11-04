@@ -14,22 +14,47 @@ const tabLabels = [
 class ScrollableTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: tabLabels
-            .map(
-              (e) => Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-                child: Text(
-                  e,
-                  style: TextStyle(color: AppColors.LIGHT_GREY_BLUE),
-                ),
-              ),
-            )
-            .toList(),
-      ),
+    return Column(
+      children: [
+        Container(
+          height: 1,
+          color: AppColors.SLATE_GREY,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: tabLabels
+                .map(
+                  (e) => Stack(
+                    alignment: AlignmentDirectional.bottomCenter,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 14, horizontal: 20),
+                        child: Text(
+                          e,
+                          style: TextStyle(color: AppColors.LIGHT_GREY_BLUE),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          width: 40,
+                          height: 2,
+                          color: Colors.green,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+                .toList(),
+          ),
+        ),
+        Container(
+          height: 1,
+          color: AppColors.SLATE_GREY,
+        ),
+      ],
     );
   }
 }
