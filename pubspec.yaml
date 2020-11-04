@@ -23,6 +23,7 @@ dependencies:
   flutter_dotenv: any
   flutter_screenutil: any
   flutter_plugin_android_lifecycle: 1.0.3
+  sphere_bottom_navigation_bar: any
   font_awesome_flutter: any
   get_it: any
   google_maps_flutter: any
