@@ -9,20 +9,21 @@ class ProfileWidgetState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: AppColors.DARK,
-        child: SingleChildScrollView(
-          child: Flex(
-            direction: Axis.vertical,
-            children: <Widget>[
-              ProfileMain(),
-              StatisticRow(),
-              OnlineFriends(),
-              RecentlyPlayedGames(headline: 'Recently Played'),
-              RecentlyPlayedGames(headline: 'Trending Games'),
-              RecentlyPlayedGames(headline: 'Backlog Awaits')
-            ],
-          ),
-        ));
+      color: AppColors.DARK,
+      child: SingleChildScrollView(
+        child: Flex(
+          direction: Axis.vertical,
+          children: <Widget>[
+            ProfileMain(),
+            StatisticRow(),
+            OnlineFriends(),
+            RecentlyPlayedGames(headline: 'Recently Played'),
+            RecentlyPlayedGames(headline: 'Trending Games'),
+            RecentlyPlayedGames(headline: 'Backlog Awaits')
+          ],
+        ),
+      ),
+    );
   }
 }
 

@@ -27,6 +27,15 @@ class StoreFrontV2 extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20.0),
             child: GestureDetector(
               child: Icon(
+                FluentIcons.apps_28_regular,
+                color: AppColors.SECONDARY_TEXT,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              child: Icon(
                 FluentIcons.search_28_filled,
                 color: AppColors.SECONDARY_TEXT,
               ),
