@@ -5,27 +5,18 @@ import 'package:steamclient/views/widgets/storefront/carousel/carousel_v2.dart';
 import 'package:steamclient/views/widgets/storefront/section_header.dart';
 import 'package:steamclient/views/widgets/storefront/section_onsale.dart';
 import 'package:steamclient/views/widgets/storefront/scrollable_tab_bar.dart';
+import 'package:steamclient/views/widgets/appbar/steam_appbar.dart';
 
 class StoreFrontV2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Store',
-          style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-        ),
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(46.0),
-          child: Container(
-            color: AppColors.IRON,
-            child: ScrollableTabBar(),
-          ),
-        ),
+      appBar: SteamAppBar(
+        titleText: 'Store',
+        bottomWidget: ScrollableTabBar(),
         actions: [
           IconButton(
-            tooltip: 'Store',
+            tooltip: 'Main Store',
             icon: Icon(
               FluentIcons.apps_28_regular,
               color: AppColors.SECONDARY_TEXT,
@@ -49,8 +40,6 @@ class StoreFrontV2 extends StatelessWidget {
             onPressed: () {},
           ),
         ],
-        backgroundColor: AppColors.CHARCOAL_GREY,
-        centerTitle: false,
       ),
       body: Container(
         decoration: BoxDecoration(color: AppColors.DARK),

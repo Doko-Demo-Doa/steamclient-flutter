@@ -23,10 +23,11 @@ class LoginScreen extends StatelessWidget {
               margin: const EdgeInsets.fromLTRB(30, 46, 30, 38),
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
-                    color: AppColors.DARK_BLUE,
-                    offset: Offset(0.0, 0.0),
-                    blurRadius: 5.0,
-                    spreadRadius: 7.0)
+                  color: AppColors.DARK_BLUE,
+                  offset: Offset(0.0, 0.0),
+                  blurRadius: 5.0,
+                  spreadRadius: 7.0,
+                )
               ], shape: BoxShape.circle),
               child: Icon(
                 FontAwesomeIcons.steam,
@@ -42,17 +43,24 @@ class LoginScreen extends StatelessWidget {
                   textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
-                      counterText: '',
-                      disabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.POWDER_BLUE)),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: AppColors.POWDER_BLUE, width: 1)),
-                      hintText: 'Username',
-                      hintStyle: TextStyle(color: AppColors.GUNMETAL)),
+                    counterText: '',
+                    disabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.POWDER_BLUE),
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColors.POWDER_BLUE,
+                        width: 1,
+                      ),
+                    ),
+                    hintText: 'Username',
+                    hintStyle: TextStyle(color: AppColors.GUNMETAL),
+                  ),
                   maxLength: 32,
                 ),
-                Padding(padding: EdgeInsets.only(bottom: 10)),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 10),
+                ),
                 TextField(
                   obscureText: true,
                   style: TextStyle(color: Colors.white60),
@@ -99,7 +107,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                          padding: const EdgeInsetsDirectional.only(top: 42)),
+                        padding: const EdgeInsetsDirectional.only(top: 42),
+                      ),
                       FlatButton(
                         color: Colors.transparent,
                         onPressed: () {
@@ -109,12 +118,12 @@ class LoginScreen extends StatelessWidget {
                           'Go Back',
                           style: TextStyle(color: Colors.white54),
                         ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
-            ))
+            )),
           ],
         ),
       ),
