@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:steamclient/common/predefined_colors.dart';
 import 'package:steamclient/enums/viewstate.dart';
 import 'package:steamclient/views/screens/chat_threads.dart';
-import 'package:steamclient/views/screens/profile.dart';
+import 'package:steamclient/views/screens/market.dart';
 import 'package:steamclient/views/screens/steam_guard.dart';
 import 'package:steamclient/views/screens/storefront_v2.dart';
 import 'package:steamclient/vms/auth_vm.dart';
@@ -16,7 +16,7 @@ class _TabLayoutState extends State<SteamTablayout>
   int _currentTabIndex = 2;
   final _kTabPages = <Widget>[
     SteamGuard(),
-    Profile(),
+    SteamMarket(),
     StoreFrontV2(),
     ChatThreads()
   ];
@@ -54,8 +54,8 @@ class _TabLayoutState extends State<SteamTablayout>
             label: 'Guard',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.supervisor_account),
-            label: 'Profile',
+            icon: Icon(Icons.shopping_cart_outlined),
+            label: 'Market',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),

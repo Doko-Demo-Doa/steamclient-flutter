@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:steamclient/common/static_data.dart' as routes;
+import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/chat.dart';
 import 'package:steamclient/views/screens/chat_threads.dart';
 import 'package:steamclient/views/screens/login.dart';
+import 'package:steamclient/views/screens/market.dart';
 import 'package:steamclient/views/screens/playground.dart';
-import 'package:steamclient/views/screens/steam_guard.dart';
-import 'package:steamclient/views/tab_layout.dart';
-
-import 'package:steamclient/views/screens/app_page.dart';
 import 'package:steamclient/views/screens/profile.dart';
+import 'package:steamclient/views/screens/steam_guard.dart';
 import 'package:steamclient/views/screens/storefront_v2.dart';
+
+import 'package:steamclient/views/tab_layout.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -31,15 +32,18 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => Chat());
     case routes.ProfileRoute:
       return MaterialPageRoute(builder: (_) => Profile());
+    case routes.MarketRoute:
+      return MaterialPageRoute(builder: (_) => SteamMarket());
     case routes.AppPageRoute:
       var appId = settings.arguments as String;
       return MaterialPageRoute(builder: (_) => AppPage(appId));
     default:
       return MaterialPageRoute(
-          builder: (_) => Scaffold(
-                body: Center(
-                  child: Text('No path for ${settings.name}'),
-                ),
-              ));
+        builder: (_) => Scaffold(
+          body: Center(
+            child: Text('No path for ${settings.name}'),
+          ),
+        ),
+      );
   }
 }

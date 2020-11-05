@@ -9,3 +9,4 @@ const String ChatThreadsRoute = 'ChatThreads';
 const String ChatRoute = 'Chat';
 const String ProfileRoute = 'Prpofile';
 const String AppPageRoute = 'AppPage';
+const String MarketRoute = 'Market';
