@@ -4,7 +4,6 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:steamclient/views/widgets/storefront/carousel/carousel_v2.dart';
 import 'package:steamclient/views/widgets/storefront/section_header.dart';
 import 'package:steamclient/views/widgets/storefront/section_onsale.dart';
-import 'package:steamclient/views/widgets/storefront/scrollable_tab_bar.dart';
 import 'package:steamclient/views/widgets/appbar/steam_appbar.dart';
 
 class StoreFrontV2 extends StatelessWidget {
@@ -13,7 +12,6 @@ class StoreFrontV2 extends StatelessWidget {
     return Scaffold(
       appBar: SteamAppBar(
         titleText: 'Store',
-        bottomWidget: ScrollableTabBar(),
         actions: [
           IconButton(
             tooltip: 'Main Store',

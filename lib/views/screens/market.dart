@@ -11,9 +11,9 @@ class SteamMarket extends StatelessWidget {
         titleText: 'Market',
         actions: [
           IconButton(
-            tooltip: 'Main Store',
+            tooltip: 'Filter',
             icon: Icon(
-              FluentIcons.apps_28_regular,
+              FluentIcons.filter_28_filled,
               color: AppColors.SECONDARY_TEXT,
             ),
             onPressed: () {},
