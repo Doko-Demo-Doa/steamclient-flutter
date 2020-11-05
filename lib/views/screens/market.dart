@@ -7,6 +7,7 @@ class SteamMarket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.CHARCOAL_GREY,
       appBar: SteamAppBar(
         titleText: 'Market',
         actions: [
