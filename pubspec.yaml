@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   auto_size_text: any
+  boardview: any
   color: any
   palette_generator: ^0.2.3
   country_icons: any
