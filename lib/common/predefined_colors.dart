@@ -17,6 +17,7 @@ class AppColors {
   static HexColor ELECTRIC_LIME = HexColor('#A1F410');
   static HexColor FAWN = HexColor('#CFA781');
   static HexColor GUNMETAL = HexColor('#505A66');
+  static HexColor GUNMETAL_LIGHT = HexColor('#4f535c');
   static HexColor LIGHT_BLUE = HexColor('#6DCFF6');
   static HexColor LIGHT_GREY_BLUE = HexColor('#98B4CD');
   static HexColor LIGHT_NAVY_BLUE = HexColor('#2F6181');
