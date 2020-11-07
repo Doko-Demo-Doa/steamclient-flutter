@@ -50,7 +50,7 @@ class TopItem extends StatelessWidget {
             Icon(
               FluentIcons.chevron_right_28_regular,
               color: AppColors.SECONDARY_TEXT,
-            )
+            ),
           ],
         ),
       ),

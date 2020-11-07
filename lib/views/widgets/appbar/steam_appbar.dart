@@ -19,7 +19,7 @@ class SteamAppBar extends PreferredSize {
             elevation: 0,
             title: Text(
               titleText,
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.normal),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             actions: actions,
             backgroundColor: AppColors.CHARCOAL_GREY,
