@@ -41,7 +41,7 @@ const sampleData = [
 class SteamMarket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var list = new List<int>.generate(5, (i) => i + 1);
+    var list = new List<int>.generate(20, (i) => i + 1);
     var displayList = [];
     list.forEach((element) {
       displayList.addAll(sampleData);
@@ -72,46 +72,51 @@ class SteamMarket extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.fromLTRB(16, 18, 16, 0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopItem(
+        child: ListView.builder(
+          itemCount: displayList.length,
+          itemBuilder: (context, index) {
+            var e = displayList[index];
+            if (index == 0) {
+              return TopItem(
                 icon: Icon(
                   FluentIcons.apps_28_regular,
                   color: AppColors.SECONDARY_TEXT,
                 ),
-              ),
-              TopItem(
+              );
+            }
+            if (index == 1) {
+              return TopItem(
                 icon: Icon(
                   FluentIcons.collections_24_filled,
                   color: AppColors.SECONDARY_TEXT,
                 ),
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Popular',
-                    style: TextStyle(
-                        color: AppColors.SECONDARY_TEXT, fontSize: 17),
-                  ),
-                  Icon(
-                    FluentIcons.chevron_down_20_filled,
-                    color: AppColors.SECONDARY_TEXT,
-                  ),
-                ],
-              ),
-              ...displayList
-                  .map(
-                    (e) => MarketItem(
-                      title: e['name'],
-                      game: e['game'],
-                      price: e['price'],
-                      assetName: e['asset'],
+              );
+            }
+            if (index == 2) {
+              return Container(
+                margin: const EdgeInsets.only(bottom: 20, top: 10),
+                child: Row(
+                  children: [
+                    Text(
+                      'Popular',
+                      style: TextStyle(
+                          color: AppColors.SECONDARY_TEXT, fontSize: 17),
                     ),
-                  )
-                  .toList(),
-            ],
-          ),
+                    Icon(
+                      FluentIcons.chevron_down_20_filled,
+                      color: AppColors.SECONDARY_TEXT,
+                    ),
+                  ],
+                ),
+              );
+            }
+            return MarketItem(
+              title: e['name'],
+              game: e['game'],
+              price: e['price'],
+              assetName: e['asset'],
+            );
+          },
         ),
       ),
     );
