@@ -72,36 +72,42 @@ class ChatThreads extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.only(right: 16),
                       decoration: BoxDecoration(
-                          border: Border(
-                              right: BorderSide(
-                                  color: item.playing == ''
-                                      ? AppColors.LIGHT_BLUE
-                                      : AppColors.ELECTRIC_LIME,
-                                  width: 3))),
+                        border: Border(
+                          right: BorderSide(
+                            color: item.playing == ''
+                                ? AppColors.LIGHT_BLUE
+                                : AppColors.ELECTRIC_LIME,
+                            width: 3,
+                          ),
+                        ),
+                      ),
                       child: Image.network(list[index].avatar),
                     ),
                     Flexible(
-                        fit: FlexFit.tight,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              item.username,
-                              style: TextStyle(
-                                  color: item.playing == ''
-                                      ? AppColors.LIGHT_BLUE
-                                      : AppColors.VERY_PALE_GREEN,
-                                  fontSize: 16),
+                      fit: FlexFit.tight,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            item.username,
+                            style: TextStyle(
+                              color: item.playing == ''
+                                  ? AppColors.LIGHT_BLUE
+                                  : AppColors.VERY_PALE_GREEN,
+                              fontSize: 16,
                             ),
-                            Text(
-                              item.playing != '' ? item.playing : 'Online',
-                              style: TextStyle(
-                                  color: item.playing != ''
-                                      ? AppColors.ELECTRIC_LIME
-                                      : AppColors.LIGHT_BLUE),
-                            )
-                          ],
-                        )),
+                          ),
+                          Text(
+                            item.playing != '' ? item.playing : 'Online',
+                            style: TextStyle(
+                              color: item.playing != ''
+                                  ? AppColors.ELECTRIC_LIME
+                                  : AppColors.LIGHT_BLUE,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     Text(
                       '02/01/2020',
                       style:
