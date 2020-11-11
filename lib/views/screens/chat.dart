@@ -122,84 +122,94 @@ class Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.ALMOST_BLACK,
+      appBar: AppBar(
+        elevation: 0,
         backgroundColor: AppColors.ALMOST_BLACK,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: AppColors.ALMOST_BLACK,
-          actions: <Widget>[
-            IconButton(
-              tooltip: 'View Profile',
-              icon: Icon(Icons.person),
-              onPressed: () {},
-            ),
-            IconButton(
-              tooltip: 'Add into Group Chat',
-              icon: Icon(Icons.person_add),
-              onPressed: () {},
-            )
-          ],
-          title: Flex(
-            direction: Axis.horizontal,
-            children: <Widget>[
-              Image.network(
-                ava,
-                width: 38,
-                height: 38,
-              ),
-              Padding(padding: const EdgeInsets.symmetric(horizontal: 4)),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text('Scientific Witchery',
-                      style: TextStyle(
-                          color: AppColors.ELECTRIC_LIME,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Dota 2: Ranked',
-                      style: TextStyle(
-                          color: AppColors.VERY_PALE_GREEN, fontSize: 13))
-                ],
-              )
-            ],
+        actions: <Widget>[
+          IconButton(
+            tooltip: 'View Profile',
+            icon: Icon(Icons.person),
+            onPressed: () {},
           ),
-        ),
-        body: Flex(
-          direction: Axis.vertical,
+          IconButton(
+            tooltip: 'Add into Group Chat',
+            icon: Icon(Icons.person_add),
+            onPressed: () {},
+          ),
+        ],
+        title: Flex(
+          direction: Axis.horizontal,
           children: <Widget>[
-            Flexible(
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onPanDown: (_) {
-                  FocusScope.of(context).requestFocus(FocusNode());
+            Image.network(
+              ava,
+              width: 38,
+              height: 38,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Scientific Witchery',
+                  style: TextStyle(
+                    color: AppColors.ELECTRIC_LIME,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'Dota 2: Ranked',
+                  style: TextStyle(
+                    color: AppColors.VERY_PALE_GREEN,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+      body: Flex(
+        direction: Axis.vertical,
+        children: <Widget>[
+          Flexible(
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onPanDown: (_) {
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
+              child: ListView.builder(
+                reverse: true,
+                itemCount: messages.length,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                itemBuilder: (BuildContext context, int index) {
+                  var item = this.messages[index];
+                  var maxWidth = MediaQuery.of(context).size.width * 0.7;
+                  var isSelf = index % 2 == 0 && index < 6;
+                  return Align(
+                    alignment:
+                        !isSelf ? Alignment.centerLeft : Alignment.centerRight,
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 4)),
+                        isSelf
+                            ? rightText(item, maxWidth)
+                            : leftText(item, maxWidth),
+                      ],
+                    ),
+                  );
                 },
-                child: ListView.builder(
-                    reverse: true,
-                    itemCount: messages.length,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 12),
-                    itemBuilder: (BuildContext context, int index) {
-                      var item = this.messages[index];
-                      var maxWidth = MediaQuery.of(context).size.width * 0.7;
-                      var isSelf = index % 2 == 0 && index < 6;
-                      return Align(
-                          alignment: !isSelf
-                              ? Alignment.centerLeft
-                              : Alignment.centerRight,
-                          child: Column(
-                            children: <Widget>[
-                              Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 4)),
-                              isSelf
-                                  ? rightText(item, maxWidth)
-                                  : leftText(item, maxWidth),
-                            ],
-                          ));
-                    }),
               ),
             ),
-            InputArea()
-          ],
-        ));
+          ),
+          InputArea()
+        ],
+      ),
+    );
   }
 }

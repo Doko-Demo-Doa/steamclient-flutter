@@ -42,73 +42,78 @@ class ChatThreads extends StatelessWidget {
     return Container(
       color: AppColors.ALMOST_BLACK,
       child: ListView.builder(
-          itemCount: list.length,
-          itemBuilder: (BuildContext ctxt, int index) {
-            var item = list[index];
-            return Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, 'Chat');
-                },
-                splashColor: AppColors.DARK_BLUE,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: AppColors.DARK_BLUE_GREY, width: 1))),
-                  height: 68,
-                  child: Flex(
-                    mainAxisSize: MainAxisSize.max,
-                    direction: Axis.horizontal,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.only(right: 16),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                right: BorderSide(
-                                    color: item.playing == ''
-                                        ? AppColors.LIGHT_BLUE
-                                        : AppColors.ELECTRIC_LIME,
-                                    width: 3))),
-                        child: Image.network(list[index].avatar),
-                      ),
-                      Flexible(
-                          fit: FlexFit.tight,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                item.username,
-                                style: TextStyle(
-                                    color: item.playing == ''
-                                        ? AppColors.LIGHT_BLUE
-                                        : AppColors.VERY_PALE_GREEN,
-                                    fontSize: 16),
-                              ),
-                              Text(
-                                item.playing != '' ? item.playing : 'Online',
-                                style: TextStyle(
-                                    color: item.playing != ''
-                                        ? AppColors.ELECTRIC_LIME
-                                        : AppColors.LIGHT_BLUE),
-                              )
-                            ],
-                          )),
-                      Text(
-                        '02/01/2020',
-                        style: TextStyle(
-                            color: AppColors.POWDER_BLUE, fontSize: 12),
-                      ),
-                    ],
+        itemCount: list.length,
+        itemBuilder: (BuildContext ctxt, int index) {
+          var item = list[index];
+          return Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'Chat');
+              },
+              splashColor: AppColors.DARK_BLUE,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: AppColors.DARK_BLUE_GREY,
+                      width: 1,
+                    ),
                   ),
                 ),
+                height: 68,
+                child: Flex(
+                  mainAxisSize: MainAxisSize.max,
+                  direction: Axis.horizontal,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: const EdgeInsets.only(right: 16),
+                      decoration: BoxDecoration(
+                          border: Border(
+                              right: BorderSide(
+                                  color: item.playing == ''
+                                      ? AppColors.LIGHT_BLUE
+                                      : AppColors.ELECTRIC_LIME,
+                                  width: 3))),
+                      child: Image.network(list[index].avatar),
+                    ),
+                    Flexible(
+                        fit: FlexFit.tight,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              item.username,
+                              style: TextStyle(
+                                  color: item.playing == ''
+                                      ? AppColors.LIGHT_BLUE
+                                      : AppColors.VERY_PALE_GREEN,
+                                  fontSize: 16),
+                            ),
+                            Text(
+                              item.playing != '' ? item.playing : 'Online',
+                              style: TextStyle(
+                                  color: item.playing != ''
+                                      ? AppColors.ELECTRIC_LIME
+                                      : AppColors.LIGHT_BLUE),
+                            )
+                          ],
+                        )),
+                    Text(
+                      '02/01/2020',
+                      style:
+                          TextStyle(color: AppColors.POWDER_BLUE, fontSize: 12),
+                    ),
+                  ],
+                ),
               ),
-            );
-          }),
+            ),
+          );
+        },
+      ),
     );
   }
 }
