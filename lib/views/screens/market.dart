@@ -71,7 +71,8 @@ class SteamMarket extends StatelessWidget {
         ],
       ),
       body: Container(
-        padding: const EdgeInsets.fromLTRB(16, 18, 16, 0),
+        padding: const EdgeInsets.fromLTRB(0, 18, 0, 0),
+        margin: const EdgeInsets.symmetric(horizontal: 16),
         child: ListView.builder(
           itemCount: displayList.length,
           itemBuilder: (context, index) {
