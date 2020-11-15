@@ -14,15 +14,20 @@ class OnlineFriends extends StatelessWidget {
     final imgSize = 80.0;
     List<Widget> ofList = onlineF.map((item) {
       return Padding(
-          child: Container(
-              width: imgSize,
-              height: imgSize,
-              decoration: BoxDecoration(
-                  color: Colors.white10,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      fit: BoxFit.contain, image: NetworkImage(item)))),
-          padding: const EdgeInsets.only(right: 12));
+        child: Container(
+          width: imgSize,
+          height: imgSize,
+          decoration: BoxDecoration(
+            color: Colors.white10,
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              fit: BoxFit.contain,
+              image: NetworkImage(item),
+            ),
+          ),
+        ),
+        padding: const EdgeInsets.only(right: 12),
+      );
     }).toList();
 
     return Container(

@@ -45,6 +45,14 @@ class StoreFrontV2 extends StatelessWidget {
           primary: true,
           child: Column(
             children: <Widget>[
+              Image.asset(
+                'assets/images/steam_fighting_game_static_banner.png',
+                width: double.infinity,
+                height: 114,
+                fit: BoxFit.contain,
+                alignment: Alignment.center,
+                scale: 2.6,
+              ),
               Carousel(),
               SectionHeader('Featured & Recommended'),
               SectionOnsale(''),
