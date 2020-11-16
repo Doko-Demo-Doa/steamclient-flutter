@@ -22,6 +22,7 @@ dependencies:
   fluentui_system_icons: any
   cupertino_stackview: any
   dio: any
+  sticky_headers: any
   drawing_animation: any
   flutter_dotenv: any
   flutter_screenutil: any

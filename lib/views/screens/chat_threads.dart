@@ -2,6 +2,61 @@ import 'package:flutter/material.dart';
 import 'package:steamclient/common/predefined_colors.dart';
 import 'package:steamclient/models/user.dart';
 
+const sampleData = [
+  {
+    'name': 'commanderhigsby',
+    'online': true,
+    'playing': 'Age of Empires II: Definitive Edition',
+  },
+  {
+    'name': 'Masanori',
+    'online': true,
+    'playing': 'Oxygen Not Included',
+  },
+  {
+    'name': 'Wrath (Sin)',
+    'online': true,
+    'playing': 'Metal Gear Rising: Revengeance',
+  },
+  {
+    'name': 'Galflame',
+    'online': true,
+    'playing': 'Dota 2',
+  },
+  {
+    'name': 'Rush',
+    'online': true,
+  },
+  {
+    'name': 'mitooil',
+    'online': true,
+  },
+  {
+    'name': 'AlexDriver',
+    'online': false,
+  },
+  {
+    'name': 'Kenji',
+    'online': false,
+  },
+  {
+    'name': 'Nguyen Pham',
+    'online': false,
+  },
+  {
+    'name': 'Aiden',
+    'online': false,
+  },
+  {
+    'name': 'Jim Gordon',
+    'online': false,
+  },
+  {
+    'name': 'Phoenix',
+    'online': false,
+  },
+];
+
 class ChatThreads extends StatelessWidget {
   List<User> generateData() {
     var u1 = new User();
