@@ -1,8 +1,26 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:steamclient/common/predefined_colors.dart';
 
-class SteamGuard extends StatelessWidget {
+class _SteamGuardState extends State {
+  double progress = 100.0;
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(new Duration(seconds: 1), (timer) {
+      setState(() {
+        if (progress <= 0.0) {
+          progress = 100.0;
+          return;
+        }
+        progress = progress - 10.0;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,19 +33,32 @@ class SteamGuard extends StatelessWidget {
           Text(
             '2K44Z',
             style: TextStyle(
-                fontSize: 44, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 44,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           Expanded(
             child: CircularPercentIndicator(
               radius: 210.0,
               lineWidth: 8.0,
-              startAngle: 180,
-              percent: 0.7,
-              center: new Text("0:25",
-                  style: TextStyle(color: Colors.white, fontSize: 42)),
+              animation: true,
+              animateFromLastPercent: true,
+              animationDuration: 400,
+              startAngle: 0,
+              percent: (progress / 100),
+              center: new Text(
+                "0:${(progress.toInt() / 100).toString().replaceAll('.', '').padLeft(2, '0')}",
+                style: TextStyle(color: Colors.white, fontSize: 42),
+              ),
               backgroundColor: AppColors.DARK_GREY_BLUE,
-              progressColor: AppColors.DUSTY_ORANGE,
               circularStrokeCap: CircularStrokeCap.round,
+              maskFilter: MaskFilter.blur(BlurStyle.solid, 3),
+              linearGradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.orange, Colors.yellow],
+              ),
             ),
           ),
           ConstrainedBox(
@@ -52,12 +83,19 @@ class SteamGuard extends StatelessWidget {
                     'Help',
                     style: TextStyle(color: Colors.white54),
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
+  }
+}
+
+class SteamGuard extends StatefulWidget {
+  @override
+  _SteamGuardState createState() {
+    return _SteamGuardState();
   }
 }
