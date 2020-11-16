@@ -83,6 +83,7 @@ class SteamMarket extends StatelessWidget {
                   FluentIcons.apps_28_regular,
                   color: AppColors.SECONDARY_TEXT,
                 ),
+                text: 'My inventory',
               );
             }
             if (index == 1) {
@@ -91,6 +92,7 @@ class SteamMarket extends StatelessWidget {
                   FluentIcons.collections_24_filled,
                   color: AppColors.SECONDARY_TEXT,
                 ),
+                text: 'Confirmations',
               );
             }
             if (index == 2) {

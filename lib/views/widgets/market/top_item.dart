@@ -7,7 +7,9 @@ const itemRadius = 8.0;
 
 class TopItem extends StatelessWidget {
   final Icon icon;
-  TopItem({@required this.icon});
+  final String text;
+
+  TopItem({@required this.icon, this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +45,11 @@ class TopItem extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                'AWP12',
-                style: TextStyle(color: AppColors.LIGHT_GREY_BLUE),
+                this.text,
+                style: TextStyle(
+                  color: AppColors.LIGHT_GREY_BLUE,
+                  fontSize: 16,
+                ),
               ),
             ),
             Icon(
