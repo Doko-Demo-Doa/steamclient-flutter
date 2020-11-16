@@ -29,7 +29,8 @@ class _SteamGuardState extends State {
 
   @override
   Widget build(BuildContext context) {
-    Scaffold();
+    double optimalRadius = MediaQuery.of(context).size.width * (2 / 5);
+
     return Scaffold(
       appBar: SteamAppBar(
         titleText: 'Steam Guard',
@@ -44,7 +45,7 @@ class _SteamGuardState extends State {
           children: <Widget>[
             Expanded(
               child: CircularPercentIndicator(
-                radius: 210.0,
+                radius: optimalRadius,
                 lineWidth: 8.0,
                 animation: true,
                 animateFromLastPercent: true,
