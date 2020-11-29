@@ -46,7 +46,7 @@ class StoreFrontV2 extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset(
-                'assets/images/steam_fighting_game_static_banner.png',
+                'assets/images/square_enix_promo.png',
                 width: double.infinity,
                 height: 114,
                 fit: BoxFit.contain,
