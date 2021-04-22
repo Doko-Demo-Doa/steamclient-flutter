@@ -87,8 +87,10 @@ class LoginScreen extends StatelessWidget {
                       children: <Widget>[
                         Padding(
                             padding: const EdgeInsetsDirectional.only(top: 62)),
-                        FlatButton(
-                          color: AppColors.DARK_BLUE_GREY,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: AppColors.DARK_BLUE_GREY,
+                          ),
                           onPressed: () {
                             Provider.of<AuthViewModel>(context, listen: false)
                                 .login(null, null);
@@ -100,8 +102,10 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Padding(
                             padding: const EdgeInsetsDirectional.only(top: 16)),
-                        FlatButton(
-                          color: AppColors.LIGHT_NAVY_BLUE,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: AppColors.LIGHT_NAVY_BLUE,
+                          ),
                           onPressed: () {},
                           child: Text(
                             'Signup',
@@ -111,8 +115,10 @@ class LoginScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsetsDirectional.only(top: 42),
                         ),
-                        FlatButton(
-                          color: Colors.transparent,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: Colors.transparent,
+                          ),
                           onPressed: () {
                             Navigator.pop(context);
                           },

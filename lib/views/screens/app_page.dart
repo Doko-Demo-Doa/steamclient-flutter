@@ -110,11 +110,13 @@ class AppPage extends StatelessWidget {
                   Column(
                     children: <Widget>[
                       Padding(padding: const EdgeInsets.all(9)),
-                      RaisedButton(
+                      ElevatedButton(
                         onPressed: () {
                           print('Pressed');
                         },
-                        color: AppColors.DIRTY_GREEN,
+                        style: ElevatedButton.styleFrom(
+                          primary: AppColors.DIRTY_GREEN,
+                        ),
                         child: Text('Add To Cart',
                             style: TextStyle(color: Colors.white)),
                       ),

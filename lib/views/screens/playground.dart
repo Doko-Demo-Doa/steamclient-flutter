@@ -12,7 +12,6 @@ class Playground extends StatefulWidget {
 
 class _PlaygroundState extends State<Playground>
     with SingleTickerProviderStateMixin {
-
   @override
   void initState() {
     super.initState();
@@ -37,7 +36,7 @@ class _PlaygroundState extends State<Playground>
             padding: const EdgeInsets.all(6),
             color: Colors.white,
           ),
-          RaisedButton(child: Text('Redraw'), onPressed: () {})
+          ElevatedButton(child: Text('Redraw'), onPressed: () {})
         ],
       ),
     );

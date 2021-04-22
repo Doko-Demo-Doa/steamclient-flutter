@@ -83,7 +83,7 @@ class ChatThreads extends StatelessWidget {
     u4.username = 'Scientific Witchery';
     u4.playing = '';
 
-    List<User> resp = new List();
+    List<User> resp = [];
     resp.add(u1);
     resp.add(u2);
     resp.add(u3);

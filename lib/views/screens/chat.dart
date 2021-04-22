@@ -6,7 +6,7 @@ import 'package:steamclient/views/widgets/chat/input_area.dart';
 enum ItemEnums { startVoiceChat, viewProfile }
 
 class Chat extends StatelessWidget {
-  List messages = [
+  final List messages = [
     'Chat 1 🤣',
     'Chat 2 🤣',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
@@ -27,7 +27,7 @@ class Chat extends StatelessWidget {
   final ava =
       'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/df/dfce4a6e90f0379a0f623b5003c1da6dd1bb07f0_full.jpg';
 
-  GlobalKey btnKey = GlobalKey();
+  final GlobalKey btnKey = GlobalKey();
 
   Widget leftText(String content, double maxWidth) {
     return Row(
