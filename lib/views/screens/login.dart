@@ -36,94 +36,97 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-                child: Column(
-              children: <Widget>[
-                TextField(
-                  style: TextStyle(color: Colors.white60),
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
-                    counterText: '',
-                    disabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.POWDER_BLUE),
-                    ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: AppColors.POWDER_BLUE,
-                        width: 1,
-                      ),
-                    ),
-                    hintText: 'Username',
-                    hintStyle: TextStyle(color: AppColors.GUNMETAL),
-                  ),
-                  maxLength: 32,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10),
-                ),
-                TextField(
-                  obscureText: true,
-                  style: TextStyle(color: Colors.white60),
-                  enabled: false,
-                  decoration: InputDecoration(
+              child: Column(
+                children: <Widget>[
+                  TextField(
+                    style: TextStyle(color: Colors.white60),
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
                       counterText: '',
                       disabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.POWDER_BLUE)),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.GUNMETAL)),
+                        borderSide: BorderSide(color: AppColors.POWDER_BLUE),
+                      ),
                       border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.POWDER_BLUE)),
-                      hintText: 'Password',
-                      hintStyle: TextStyle(color: AppColors.GUNMETAL)),
-                  maxLength: 32,
-                ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(minWidth: 120, maxWidth: 230),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Padding(
-                          padding: const EdgeInsetsDirectional.only(top: 62)),
-                      FlatButton(
-                        color: AppColors.DARK_BLUE_GREY,
-                        onPressed: () {
-                          Provider.of<AuthViewModel>(context, listen: false)
-                              .login(null, null);
-                        },
-                        child: Text(
-                          'Login',
-                          style: TextStyle(color: Colors.white54),
+                        borderSide: BorderSide(
+                          color: AppColors.POWDER_BLUE,
+                          width: 1,
                         ),
                       ),
-                      Padding(
-                          padding: const EdgeInsetsDirectional.only(top: 16)),
-                      FlatButton(
-                        color: AppColors.LIGHT_NAVY_BLUE,
-                        onPressed: () {},
-                        child: Text(
-                          'Signup',
-                          style: TextStyle(color: Colors.white54),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.only(top: 42),
-                      ),
-                      FlatButton(
-                        color: Colors.transparent,
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Text(
-                          'Go Back',
-                          style: TextStyle(color: Colors.white54),
-                        ),
-                      ),
-                    ],
+                      hintText: 'Username',
+                      hintStyle: TextStyle(color: AppColors.GUNMETAL),
+                    ),
+                    maxLength: 32,
                   ),
-                ),
-              ],
-            )),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                  ),
+                  TextField(
+                    obscureText: true,
+                    style: TextStyle(color: Colors.white60),
+                    enabled: false,
+                    decoration: InputDecoration(
+                        counterText: '',
+                        disabledBorder: UnderlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppColors.POWDER_BLUE)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: AppColors.GUNMETAL)),
+                        border: UnderlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppColors.POWDER_BLUE)),
+                        hintText: 'Password',
+                        hintStyle: TextStyle(color: AppColors.GUNMETAL)),
+                    maxLength: 32,
+                  ),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(minWidth: 120, maxWidth: 230),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Padding(
+                            padding: const EdgeInsetsDirectional.only(top: 62)),
+                        FlatButton(
+                          color: AppColors.DARK_BLUE_GREY,
+                          onPressed: () {
+                            Provider.of<AuthViewModel>(context, listen: false)
+                                .login(null, null);
+                          },
+                          child: Text(
+                            'Login',
+                            style: TextStyle(color: Colors.white54),
+                          ),
+                        ),
+                        Padding(
+                            padding: const EdgeInsetsDirectional.only(top: 16)),
+                        FlatButton(
+                          color: AppColors.LIGHT_NAVY_BLUE,
+                          onPressed: () {},
+                          child: Text(
+                            'Signup',
+                            style: TextStyle(color: Colors.white54),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 42),
+                        ),
+                        FlatButton(
+                          color: Colors.transparent,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'Go Back',
+                            style: TextStyle(color: Colors.white54),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

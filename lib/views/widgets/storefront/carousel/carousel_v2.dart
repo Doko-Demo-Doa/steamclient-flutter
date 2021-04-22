@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:steamclient/common/predefined_colors.dart';
-import 'package:steamclient/views/widgets/storefront/carousel/custom_scroll_physics.dart';
 
 class Carousel extends StatelessWidget {
   final imageLinks = [

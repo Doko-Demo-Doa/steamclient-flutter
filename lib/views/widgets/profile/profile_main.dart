@@ -48,117 +48,134 @@ class ProfileMain extends StatelessWidget {
           ),
           // Right: Overview
           Expanded(
-              flex: 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  // 2 statistic items:
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisAlignment: MainAxisAlignment.end,
+            flex: 2,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                // 2 statistic items:
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: new Text(
+                            "22",
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            shape: CircleBorder(),
+                            padding: const EdgeInsets.all(12),
+                            side: BorderSide(color: AppColors.RED_PURPLE),
+                          ),
+                        ),
+                        Padding(padding: const EdgeInsets.only(bottom: 6)),
+                        Text('Level', style: TextStyle(color: Colors.white))
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: new Text(
+                            "24",
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            shape: CircleBorder(),
+                            padding: const EdgeInsets.all(12),
+                            side: BorderSide(color: AppColors.FAWN),
+                          ),
+                        ),
+                        Padding(padding: const EdgeInsets.only(bottom: 6)),
+                        Text('Badges', style: TextStyle(color: Colors.white))
+                      ],
+                    ),
+                  ],
+                ),
+                Padding(padding: const EdgeInsets.only(bottom: 10)),
+                Container(
+                  padding: const EdgeInsets.only(right: 12),
+                  alignment: Alignment.centerLeft,
+                  child: Column(
                     children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          OutlineButton(
-                            onPressed: () {},
-                            child: new Text("22",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18)),
-                            shape: CircleBorder(),
-                            padding: const EdgeInsets.all(12),
-                            borderSide: BorderSide(color: AppColors.RED_PURPLE),
-                          ),
-                          Padding(padding: const EdgeInsets.only(bottom: 6)),
-                          Text('Level', style: TextStyle(color: Colors.white))
-                        ],
+                      Text(
+                        "Playing: Call of Duty Modern Warfare 3",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                            fontSize: 16.0, color: AppColors.PEA_GREEN),
                       ),
-                      Column(
+                      Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 12)),
+                      Container(
+                        width: double.infinity,
+                        child: Text(
+                          "Frankfuit, Germany",
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              fontSize: 14.0, color: AppColors.GUNMETAL),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 6),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
-                          OutlineButton(
-                            onPressed: () {},
-                            child: new Text("24",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18)),
-                            shape: CircleBorder(),
-                            padding: const EdgeInsets.all(12),
-                            borderSide: BorderSide(color: AppColors.FAWN),
+                          SizedBox(
+                            height: 24,
+                            width: 60,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                primary: AppColors.DARK_BLUE_GREY,
+                                padding: const EdgeInsets.all(4),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: BorderSide(
+                                      color: AppColors.METALLIC_BLUE),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                'Chat',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
                           ),
-                          Padding(padding: const EdgeInsets.only(bottom: 6)),
-                          Text('Badges', style: TextStyle(color: Colors.white))
+                          Padding(
+                            padding: const EdgeInsets.only(right: 16),
+                          ),
+                          SizedBox(
+                            height: 24,
+                            width: 60,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                padding: const EdgeInsets.all(4),
+                                primary: AppColors.DARK_BLUE_GREY,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: BorderSide(
+                                      color: AppColors.METALLIC_BLUE),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                'More',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
-                  Padding(padding: const EdgeInsets.only(bottom: 10)),
-                  Container(
-                    padding: const EdgeInsets.only(right: 12),
-                    alignment: Alignment.centerLeft,
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          "Playing: Call of Duty Modern Warfare 3",
-                          textAlign: TextAlign.end,
-                          style: TextStyle(
-                              fontSize: 16.0, color: AppColors.PEA_GREEN),
-                        ),
-                        Padding(
-                            padding: const EdgeInsetsDirectional.only(top: 12)),
-                        Container(
-                          width: double.infinity,
-                          child: Text(
-                            "Frankfuit, Germany",
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                                fontSize: 14.0, color: AppColors.GUNMETAL),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 6),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            SizedBox(
-                              height: 24,
-                              width: 60,
-                              child: FlatButton(
-                                color: AppColors.DARK_BLUE_GREY,
-                                padding: const EdgeInsets.all(4),
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    side: BorderSide(
-                                        color: AppColors.METALLIC_BLUE)),
-                                child: Text('Chat',
-                                    style: TextStyle(color: Colors.white)),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                            ),
-                            SizedBox(
-                              height: 24,
-                              width: 60,
-                              child: FlatButton(
-                                color: AppColors.DARK_BLUE_GREY,
-                                padding: const EdgeInsets.all(4),
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    side: BorderSide(
-                                        color: AppColors.METALLIC_BLUE)),
-                                child: Text('More',
-                                    style: TextStyle(color: Colors.white)),
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              )),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

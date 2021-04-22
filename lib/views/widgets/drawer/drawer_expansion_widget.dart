@@ -41,8 +41,8 @@ class DrawerExpansionWidgetState extends State<DrawerExpansionWidget> {
 }
 
 class DrawerExpansionWidget extends StatefulWidget {
-  String _name = '';
-  List<String> _subItems = [];
+  final String _name;
+  final List<String> _subItems;
 
   DrawerExpansionWidget(this._name, this._subItems, {Key key})
       : super(key: key);

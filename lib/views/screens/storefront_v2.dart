@@ -45,14 +45,6 @@ class StoreFrontV2 extends StatelessWidget {
           primary: true,
           child: Column(
             children: <Widget>[
-              Image.asset(
-                'assets/images/square_enix_promo.png',
-                width: double.infinity,
-                height: 114,
-                fit: BoxFit.contain,
-                alignment: Alignment.center,
-                scale: 2.6,
-              ),
               Carousel(),
               SectionHeader('Featured & Recommended'),
               SectionOnsale(''),

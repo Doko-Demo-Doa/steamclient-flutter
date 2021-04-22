@@ -22,7 +22,7 @@ class SectionOnsale extends StatelessWidget {
     sp2.spotlightImage =
         'https://cdn.cloudflare.steamstatic.com/steam/apps/870780/library_600x900.jpg?t=1596706126';
 
-    var resp = new List<Product>();
+    List<Product> resp = [];
     resp.add(sp1);
     resp.add(sp2);
     resp.add(sp1);
