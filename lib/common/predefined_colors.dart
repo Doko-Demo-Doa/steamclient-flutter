@@ -3,12 +3,14 @@ library predefined_colors;
 import 'package:steamclient/views/widgets/hex_color.dart';
 
 class AppColors {
+  static HexColor ALUMINIUM = HexColor('#98989B');
   static HexColor ALMOST_BLACK = HexColor('#03141E');
   static HexColor AVOCADO = HexColor('#8FB93B');
   static HexColor COAL = HexColor('#393c43');
   static HexColor COOL_GRAY = HexColor('#9DA3A8');
   static HexColor BLUE = HexColor('#198cff');
   static HexColor DARK = HexColor('#2E3136');
+  static HexColor TUNGSTEN = HexColor('#2F3237');
   static HexColor DARK_BLUE = HexColor('#15243C');
   static HexColor DARK_BLUE_GREY = HexColor('#18364E');
   static HexColor DARK_GREY_BLUE = HexColor('#2A4652');

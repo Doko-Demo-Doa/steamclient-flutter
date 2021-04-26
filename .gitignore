@@ -56,3 +56,6 @@ Podfile
 .vscode/
 Podfile.lock
 *.xcworkspacedata
+
+# Docs
+docs/
